@@ -24,6 +24,26 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/events')
+def events():
+    return render_template('events.html')
+
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+
+@app.route('/signin')
+def signin():
+    return render_template('signin.html')
+
+
+@app.route('/signout')
+def signout():
+    return render_template('signout.html')
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
