@@ -7,35 +7,33 @@
 
         <h1 class="center">Create an Account</h1>
 
-        <form name="signup_form" method="POST" action="{{ url_for('signup') }}"">
-          
-  <div class=" form-group">
-            <label for="name">Name</label>
-            <input type="text" name="name" class="field" required>
+        <form name="signup_form" method="POST" action="{{ url_for('signup') }}">
+            
+            <div class=" form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="field" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="field" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="field" required>
+            </div>
+
+            <p class="error error--hidden"></p>
+
+            <div class="form-group">
+                <input type="submit" value="Sign Up" class="btn-form">
+            </div>
+
+        </form>
+
+
     </div>
-
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" class="field" required>
-    </div>
-
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" name="password" class="field" required>
-    </div>
-
-    <p class="error error--hidden"></p>
-
-    <div class="form-group">
-        <input type="submit" value="Sign Up" class="btn-form">
-    </div>
-
-
-
-    </form>
-
-
-</div>
 
 </div>
 
