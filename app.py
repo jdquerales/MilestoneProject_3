@@ -15,7 +15,7 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
-
+# create an instance of MongoDB database
 mongo = PyMongo(app)
 
 db = mongo.db
@@ -31,7 +31,7 @@ def login_required(f):
             return redirect(url_for('home'))
     return wrap
 
-
+# Create User Class to be used in SignIn and SignUp functionalities
 class User:
     def start_session(self, user):
         del user['password']
