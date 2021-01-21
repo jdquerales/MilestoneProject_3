@@ -85,8 +85,10 @@ def dashboard():
     return render_template('dashboard.html')
 
 
-@app.route('/signin')
+@app.route('/signin',  methods=['POST','GET'])
 def signin():
+    if request.method == 'POST':
+        return User().login()
     return render_template('signin.html')
 
 
