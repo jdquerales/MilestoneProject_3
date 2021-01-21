@@ -10255,5 +10255,41 @@ input[type=submit] {
   display: none;
 }
 
+/* Subscribe button */
+.subsBtn input {
+    border: none;
+    padding: 8px 10px;
+    outline: none;
+    margin: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
 
+@media (max-width: 480px){
+.subsBtn input {
+    padding: 8px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    float: left!important;
+    display: block!important;
+    width: 100%!important;
+}
+}
 
+.subscribeBtn
+{
+    background: #0e3d31;
+    color: #FFF;
+    text-decoration: none;
+    padding: 8px 40px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 480px){
+.subscribeBtn {
+    margin-top: 11px;
+}
+}
