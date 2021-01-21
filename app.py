@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, jsonify, request, session, redirect
+from flask import (Flask, render_template, jsonify,
+                   request, session, redirect, url_for)
 from functools import wraps
 from flask_pymongo import PyMongo
 from passlib.hash import pbkdf2_sha256
@@ -59,7 +60,7 @@ class User:
 
     def signout(self):
         session.clear()
-        return redirect('/')
+        return redirect(url_for('home'))
 
     def login(self):
         user = db.users.find_one({"email": request.form.get('email')})
@@ -94,7 +95,7 @@ def signin():
 
 @app.route('/signout')
 def signout():
-    return render_template('signout.html')
+    return User().signout()
 
 
 @app.route('/signup', methods=['POST','GET'])
