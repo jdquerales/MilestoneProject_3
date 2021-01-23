@@ -10021,7 +10021,12 @@ hr.light {
 
 .page-section {
   padding: 8rem 0;
-  height: 50vh;
+  height: 60rem;
+}
+
+.page-subscribe {
+  padding: 8rem 0;
+  height: 40rem;
 }
 
 #mainNav {
