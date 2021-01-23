@@ -48,6 +48,7 @@ class User:
             "_id": uuid.uuid4().hex,
             "name": request.form.get('name').lower(),
             "email": request.form.get('email').lower(),
+            "affiliation": request.form.get('affiliation'),
             "password": request.form.get('password')
         }
 
@@ -65,12 +66,21 @@ class User:
         return redirect(url_for('home'))
 
     def login(self):
-        user = db.users.find_one({"email": request.form.get('email').lower()})
+        user = db.users.find_one({"email": request.form.get('email')})
         if user and pbkdf2_sha256.verify(
                 request.form.get('password'),
                 user['password']):
             return self.start_session(user)
         return jsonify({"error": "Invalid login credentials"}), 401
+
+
+class CreateNewJC:
+    def submission(self):
+        journal = {
+            "_id": uuid.uuid4().hex,
+            "title": request.form.get('title').lower()
+        }
+        return db.add_article.insert_one(journal)
 
 
 class Subscription:
@@ -102,6 +112,7 @@ def subscribe():
         Subscription().subscriber()
     return redirect(url_for('home', _anchor="about"))
 
+
 @app.route('/events')
 def events():
     return render_template('events.html')
@@ -131,6 +142,18 @@ def signup():
         return User().signup()
 
     return render_template("signup.html")
+
+
+@app.route("/create")
+def create():
+    return render_template('create.html')
+
+
+@app.route('/create', methods=['POST', 'GET'])
+def createJC():
+    if request.method == 'POST':
+        CreateNewJC().submission()
+    return render_template("dashboard.html")
 
 
 if __name__ == "__main__":
