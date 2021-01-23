@@ -79,7 +79,9 @@ class CreateNewJC:
         journal = {
             "_id": uuid.uuid4().hex,
             "title": request.form.get('title'),
-            "abstract": request.form.get('abstract')
+            "abstract": request.form.get('abstract'),
+            "link": request.form.get('link'),
+            "added_by": session['user']['name']
         }
         return db.add_article.insert_one(journal)
 
