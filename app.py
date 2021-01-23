@@ -77,18 +77,22 @@ class Subscription:
     def subscriber(self):
         new_user = {
             "_id": uuid.uuid4().hex,
-            "name": request.form['subcriptionName'],
-            "email": request.form['subcriptionEmail'],
+            "name": request.form['subscriptionName'],
+            "email": request.form['subscriptionEmail'],
         }
         mongo.db.subscribers.insert_one(new_user)
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route("/")
 def home():
+    return render_template('home.html')
+
+
+@app.route('/home', methods=['POST', 'GET'])
+def subscribe():
     if request.method == 'POST':
             Subscription().subscriber()
-
-    return render_template('home.html')
+    return redirect(url_for('home'))
 
 
 @app.route('/events')
