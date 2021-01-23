@@ -12,6 +12,7 @@ $('.navbar-toggler').click(function() {
 });
 
 
+
 $("form[name=signup_form]").submit(function (e) {
 
     var $form = $(this);

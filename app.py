@@ -75,13 +75,20 @@ class User:
 
 class Subscription:
     def subscriber(self):
-        new_user = {
+        # check if username already exists in db
+        existing_user = mongo.db.subscribers.find_one(
+            {"email": request.form.get("subscriptionEmail").lower()})
+
+        if existing_user:
+            flash("Email already subscribed, try another account!")
+        else:
+            new_user = {
             "_id": uuid.uuid4().hex,
             "name": request.form['subscriptionName'],
             "email": request.form['subscriptionEmail'],
-        }
-        mongo.db.subscribers.insert_one(new_user)
-        flash("Thanks for subscribing ! ")
+                        }
+            mongo.db.subscribers.insert_one(new_user)
+            flash("Thanks for subscribing ! ")
 
 
 @app.route("/")
@@ -92,18 +99,8 @@ def home():
 @app.route('/home', methods=['POST', 'GET'])
 def subscribe():
     if request.method == 'POST':
-        # check if username already exists in db
-        existing_user = mongo.db.subscribers.find_one(
-            {"email": request.form.get("subscriptionEmail").lower()})
-
-        if existing_user:
-            flash("Email already subscribed")
-        else:
-            Subscription().subscriber()
-            flash("Thanks for subscribing!")
-            return redirect(url_for('home'))
-    return redirect(url_for('home', _anchor='newsletter'))
-
+        Subscription().subscriber()
+    return redirect(url_for('home', _anchor="about"))
 
 @app.route('/events')
 def events():
