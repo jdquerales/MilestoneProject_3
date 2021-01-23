@@ -43,12 +43,20 @@
                 <div class="col-lg-8 text-center subsBtn">
                     <h2 class="text-white mt-0">Subscribe for our newsletter to get the lastest updates</h2>
                     <hr class="divider light my-4" />
-                
-                    <input name="subcriptionName" type="text" placeholder="FullName" class="ng-untouched ng-pristine ng-valid">
+
+            <form name="subscribe_form" method="POST" action="{{ url_for('home') }}">
+
+
+                                   <input name="subcriptionName" type="text" placeholder="FullName" class="ng-untouched ng-pristine ng-valid">
                 <span id="subscriptionNameId"></span>
                                     <input name="subcriptionEmail" type="text" placeholder="Email" class="ng-untouched ng-pristine ng-valid">
                 <span id="subscriptionEmailId"></span>
                 <button class="subscribeBtn id="subscribeBtnId">Subscribe</button>
+
+            </form>
+
+                
+ 
 
                 </div>
             </div>
@@ -56,3 +64,8 @@
     </section>
 
     {% endblock %}
+
+
+ 
+            
+

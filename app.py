@@ -32,6 +32,8 @@ def login_required(f):
     return wrap
 
 # Create User Class to be used in SignIn and SignUp functionalities
+
+
 class User:
     def start_session(self, user):
         del user['password']
@@ -65,14 +67,27 @@ class User:
     def login(self):
         user = db.users.find_one({"email": request.form.get('email')})
         if user and pbkdf2_sha256.verify(
-                                        request.form.get('password'),
-                                        user['password']):
+                request.form.get('password'),
+                user['password']):
             return self.start_session(user)
         return jsonify({"error": "Invalid login credentials"}), 401
 
 
-@app.route('/')
+class Subscription:
+    def subscriber(self):
+        new_user = {
+            "_id": uuid.uuid4().hex,
+            "name": request.form['subcriptionName'],
+            "email": request.form['subcriptionEmail'],
+        }
+        mongo.db.subscribers.insert_one(new_user)
+
+
+@app.route('/', methods=['POST', 'GET'])
 def home():
+    if request.method == 'POST':
+            Subscription().subscriber()
+
     return render_template('home.html')
 
 
@@ -87,7 +102,7 @@ def dashboard():
     return render_template('dashboard.html')
 
 
-@app.route('/signin',  methods=['POST','GET'])
+@app.route('/signin',  methods=['POST', 'GET'])
 def signin():
     if request.method == 'POST':
         return User().login()
@@ -99,7 +114,7 @@ def signout():
     return User().signout()
 
 
-@app.route('/signup', methods=['POST','GET'])
+@app.route('/signup', methods=['POST', 'GET'])
 def signup():
     if request.method == 'POST':
         return User().signup()
