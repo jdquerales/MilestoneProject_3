@@ -78,7 +78,8 @@ class CreateNewJC:
     def submission(self):
         journal = {
             "_id": uuid.uuid4().hex,
-            "title": request.form.get('title').lower()
+            "title": request.form.get('title'),
+            "abstract": request.form.get('abstract')
         }
         return db.add_article.insert_one(journal)
 
