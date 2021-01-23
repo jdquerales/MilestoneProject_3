@@ -46,8 +46,8 @@ class User:
 
         user = {
             "_id": uuid.uuid4().hex,
-            "name": request.form.get('name'),
-            "email": request.form.get('email'),
+            "name": request.form.get('name').lower(),
+            "email": request.form.get('email').lower(),
             "password": request.form.get('password')
         }
 
@@ -65,7 +65,7 @@ class User:
         return redirect(url_for('home'))
 
     def login(self):
-        user = db.users.find_one({"email": request.form.get('email')})
+        user = db.users.find_one({"email": request.form.get('email').lower()})
         if user and pbkdf2_sha256.verify(
                 request.form.get('password'),
                 user['password']):
@@ -84,8 +84,8 @@ class Subscription:
         else:
             new_user = {
             "_id": uuid.uuid4().hex,
-            "name": request.form['subscriptionName'],
-            "email": request.form['subscriptionEmail'],
+            "name": request.form['subscriptionName'].lower(),
+            "email": request.form['subscriptionEmail'].lower(),
                         }
             mongo.db.subscribers.insert_one(new_user)
             flash("Thanks for subscribing ! ")
