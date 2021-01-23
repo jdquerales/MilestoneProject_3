@@ -2,7 +2,15 @@
 // Closes responsive menu when a scroll trigger link is clicked
 $('.js-scroll-trigger').click(function () {
     $('.navbar-collapse').collapse('hide');
+    $('#mainNav').css("background-color","transparent");
 });
+
+
+// Add JQuery event for mainNav background color:
+$('.navbar-toggler').click(function() {
+    $("#mainNav").css("background-color","gray");
+});
+
 
 $("form[name=signup_form]").submit(function (e) {
 
