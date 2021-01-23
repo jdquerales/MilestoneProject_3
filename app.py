@@ -96,10 +96,10 @@ class Subscription:
             flash("Email already subscribed, try another account!")
         else:
             new_user = {
-            "_id": uuid.uuid4().hex,
-            "name": request.form['subscriptionName'].lower(),
-            "email": request.form['subscriptionEmail'].lower(),
-                        }
+                "_id": uuid.uuid4().hex,
+                "name": request.form['subscriptionName'].lower(),
+                "email": request.form['subscriptionEmail'].lower(),
+            }
             mongo.db.subscribers.insert_one(new_user)
             flash("Thanks for subscribing ! ")
 
