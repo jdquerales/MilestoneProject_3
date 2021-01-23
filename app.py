@@ -1,5 +1,5 @@
 import os
-from flask import (Flask, render_template, jsonify,
+from flask import (Flask, flash, render_template, jsonify,
                    request, session, redirect, url_for)
 from functools import wraps
 from flask_pymongo import PyMongo
@@ -81,6 +81,7 @@ class Subscription:
             "email": request.form['subscriptionEmail'],
         }
         mongo.db.subscribers.insert_one(new_user)
+        flash("Thanks for subscribing ! ")
 
 
 @app.route("/")
@@ -91,8 +92,17 @@ def home():
 @app.route('/home', methods=['POST', 'GET'])
 def subscribe():
     if request.method == 'POST':
+        # check if username already exists in db
+        existing_user = mongo.db.subscribers.find_one(
+            {"email": request.form.get("subscriptionEmail").lower()})
+
+        if existing_user:
+            flash("Email already subscribed")
+        else:
             Subscription().subscriber()
-    return redirect(url_for('home'))
+            flash("Thanks for subscribing!")
+            return redirect(url_for('home'))
+    return redirect(url_for('home', _anchor='newsletter'))
 
 
 @app.route('/events')

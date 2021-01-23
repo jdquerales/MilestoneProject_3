@@ -41,7 +41,7 @@
 <section class="page-section bg-info" id="about">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center subsBtn">
+            <div class="col-lg-8 text-center subsBtn" id="newsletter">
                 <h2 class="text-white mt-0">Subscribe for our newsletter to get the lastest updates</h2>
                 <hr class="divider light my-4" />
 
@@ -53,7 +53,10 @@
                     <input name="subscriptionEmail" type="text" placeholder="Email"
                         class="ng-untouched ng-pristine ng-valid">
                     <span id="subscriptionEmailId"></span>
-                    <button class="subscribeBtn id=" subscribeBtnId">Subscribe</button>
+                    <button class="subscribeBtn" id="subscribeBtnId" type="submit">Subscribe</button>
+                        {% for message in get_flashed_messages() %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
                 </form>
 
 
