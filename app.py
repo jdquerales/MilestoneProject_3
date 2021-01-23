@@ -47,6 +47,7 @@ class User:
         user = {
             "_id": uuid.uuid4().hex,
             "name": request.form.get('name').lower(),
+            "username": request.form.get('username').lower(),
             "email": request.form.get('email').lower(),
             "affiliation": request.form.get('affiliation'),
             "password": request.form.get('password')
@@ -81,7 +82,7 @@ class CreateNewJC:
             "title": request.form.get('title'),
             "abstract": request.form.get('abstract'),
             "link": request.form.get('link'),
-            "added_by": session['user']['name']
+            "added_by": session['user']['username']
         }
         return db.add_article.insert_one(journal)
 
