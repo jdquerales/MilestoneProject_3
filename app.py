@@ -80,9 +80,10 @@ class CreateNewJC:
         journal = {
             "_id": uuid.uuid4().hex,
             "title": request.form.get('title'),
+            "field_research": request.form.get('field'),
             "abstract": request.form.get('abstract'),
             "link": request.form.get('link'),
-            "added_by": session['user']['username']
+            "added_by": session['user']['name']
         }
         return db.add_article.insert_one(journal)
 
@@ -150,7 +151,8 @@ def signup():
 
 @app.route("/create")
 def create():
-    return render_template('create.html')
+    categories = mongo.db.field_research.find().sort("field", 1)
+    return render_template('create.html', categories=categories)
 
 
 @app.route('/create', methods=['POST', 'GET'])
