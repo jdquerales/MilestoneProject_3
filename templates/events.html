@@ -10,28 +10,31 @@
 
                 <div class="accordion" id="myAccordion">
 
+{% for journals in journals %}
 <div class="card card-accordion">
 <div class="card-header" id="item1Header">
-    {% for journals in journals %}
+    
      <h5 class="mb-0">
-       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable1" aria-expanded="false" aria-controls="expandable1">
+       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable{{loop.index}}" aria-expanded="false" aria-controls="expandable{{loop.index}}">
          {{ journals.title }} 
        </button>
-
        By: {{ journals.added_by|capitalize }} on {{ journals.added_on }} 
      </h5>
-    {% endfor %}
+   
    </div>
-   {% for journals in journals %}
-   <div id="expandable1" class="collapse" aria-labelledby="item1Header" data-parent="#myAccordion">
+   
+   <div id="expandable{{loop.index}}" class="collapse" aria-labelledby="item1Header" data-parent="#myAccordion">
      <div class="card-body">
        {{ journals.abstract }}
+
+        <a href="{{ journals.link }}" target="_blank"> Journal Link </a>
      </div>
    </div>
-   {% endfor %}
+  
 
    
  </div>
+  {% endfor %}
 
  
 </div>
