@@ -53,14 +53,21 @@
 
     <!-- Contact-->
     <section class="page-section page-subscribe " id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
-                    <hr class="divider my-4" />
-                    <p class="text-muted mb-5">JournalClub s a web based platform to host, start and organize journal club complete life cycle with the opportunity to perform all required steps of journal club in a web based application.</p>
-                </div>
-            </div>
+
+        <div class="row sections-container">
+          <div class="col-lg-4 social-links">
+            <h3 class="footer-titles mt-0">About Us</h3>
+            <p class="inline-block  text-muted mb-5">
+              JournalClub is a web based platform to host, 
+              start and organize journal club complete life cycle
+              with the opportunity to perform all required steps of journal club in a web based application.
+            </p>
+          </div>
+
+
+          <div class="col-lg-4 social-links">
+            <h3 class="footer-titles mt-0">Let's Get In Touch!</h3>
+            
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                     <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
@@ -72,7 +79,24 @@
                     <a class="d-block" href="mailto:contact@journalclub.com">contact@journalclub.com</a>
                 </div>
             </div>
+
+          </div>
+
+            <div class="col-lg-4 social-links">
+            <h3 class="footer-titles mt-0">Where we are?</h3>
+            
+            <div id="map" class=" map-container"></div>
+
+			</div>
+
+          </div>
+
+
         </div>
+
+
+
+       
     </section>
 
     <!-- Footer-->
@@ -81,6 +105,18 @@
             <div class="small text-center text-muted">Copyright © 2021 - José Querales</div>
         </div>
     </footer>
+
+
+    <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+
+	<script defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRLbEkCc7-poNiXhu7kF83J3O5UnVZ8vA&callback=initMap">
+	</script>
+
+   <script src="static/js/maps.js">
+	
+   </script>
+
     <script src="static/js/scripts.js"></script>
 </body>
 

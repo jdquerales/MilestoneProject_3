@@ -10231,3 +10231,37 @@ height: 40%;
 .flash-messages {
     color: red;
 }
+
+/* ------------------------------------- Footer styles */
+footer {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+  text-align: justify;
+  margin-left: 20px;
+ margin-right: 20px;
+ 
+}
+
+html, body {
+  overflow-x:hidden 
+} 
+
+.footer-titles {
+  text-align: center;
+  margin-bottom: 35px;
+  
+}
+
+div#map {
+    min-height: 200px;
+    width: 100%;
+}
+
+.map-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
