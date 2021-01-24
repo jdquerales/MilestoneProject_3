@@ -14,34 +14,42 @@
                 <div class=" form-group">
                     <label for="title">Title</label>
                     <input type="text" name="title" class="field" required>
-
-                    <div class="form-group">
-    <!-- Bootstrap Select menu-->
-    <select class="form-control" id="field" name="field">
-        <option value="" disabled selected>Select Field of Research</option>
-        {% for category in categories %}
-        <option value="{{ category.field }}"> {{ category.field }} </option>
-        {% endfor %}
-    
-    </select>
-  </div>
-
-                      <label for="abstract" class="form-label">Abstract</label>
-                      <textarea class="form-control" name="abstract" id="abstract" rows="3"></textarea>
-
-                      <label for="link" class="form-label">Journal Link</label>
-                      <input class="form-control" name="link" id="link"  class="field" required>
-
                 </div>
-
                 <div class="form-group">
-                    <input type="submit" value="Create New" class="btn-form">
+                    <!-- Bootstrap Select menu-->
+                    <select class="form-control" id="field" name="field">
+                        <option value="" disabled selected>Select Field of Research</option>
+                        {% for category in categories %}
+                        <option value="{{ category.field }}"> {{ category.field }} </option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+                <div class=" form-group">
+                <label for="abstract" class="form-label">Abstract</label>
+                <textarea class="form-control" name="abstract" id="abstract" rows="3"></textarea>
                 </div>
 
-            </form>
+                <div class=" form-group">
+                <label for="link" class="form-label">Journal Link</label>
+                <input class="form-control" name="link" id="link" class="field" required>
+                </div>
 
+                <div class=" form-group">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" class="field" required>
+                </div>
 
     </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create New" class="btn-form">
+    </div>
+
+    </form>
+
+
+</div>
 
 </div>
 

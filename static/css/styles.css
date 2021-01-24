@@ -10017,7 +10017,7 @@ input[type=submit] {
   box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
   border-radius: 5px;
   background: var(--white);
-  margin: 150px 30% 10px 30%;
+  margin: 80px 30% 10px 30%;
 }
 
 .card-dashboard {
@@ -10135,7 +10135,7 @@ margin: 10px 20px 10px 20px;
 }
 
 .card {
-margin: 150px 20px 10px 20px;
+margin: 0px 20px 10px 20px;
 }
 
 .card-dashboard {
@@ -10176,6 +10176,10 @@ height: 40%;
     height: 130vh;
 }
 
+.createpage {
+    height: 130vh;
+}
+
 .card-dashboard h1 {
   margin: 0.5em 0 1em;
   font-size: 20px;
@@ -10195,7 +10199,7 @@ height: 40%;
 
 /* event page */
 .eventpage {
-  padding-top: 10rem;
+  padding-top: 8rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/desktop.jpg");
   background-position: center;
