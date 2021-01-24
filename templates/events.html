@@ -6,38 +6,41 @@
 <div class="card-wrapper eventpage container-fluid ">
 
     <h1 class="text-uppercase text-white font-weight-bold">Journal Club Blog
-                </h1>
+    </h1>
 
-                <div class="accordion" id="myAccordion">
+    <div class="accordion" id="myAccordion">
 
-{% for journals in journals %}
-<div class="card card-accordion">
-<div class="card-header" id="item1Header">
-    
-     <h5 class="mb-0">
-       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable{{loop.index}}" aria-expanded="false" aria-controls="expandable{{loop.index}}">
-         {{ journals.title }} 
-       </button>
-       By: {{ journals.added_by|capitalize }} on {{ journals.added_on }} 
-     </h5>
-   
-   </div>
-   
-   <div id="expandable{{loop.index}}" class="collapse" aria-labelledby="item1Header" data-parent="#myAccordion">
-     <div class="card-body">
-       {{ journals.abstract }}
+        {% for journals in journals %}
+        <div class="card card-accordion">
+            <div class="card-header" id="item1Header">
 
-        <a href="{{ journals.link }}" target="_blank"> Journal Link </a>
-     </div>
-   </div>
-  
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#expandable{{loop.index}}" aria-expanded="false"
+                        aria-controls="expandable{{loop.index}}">
+                        {{ journals.title }}
+                    </button>
+                    By: {{ journals.added_by|capitalize }} on {{ journals.added_on }}
+                </h5>
 
-   
- </div>
-  {% endfor %}
+            </div>
 
- 
-</div>
+            <div id="expandable{{loop.index}}" class="collapse collapse-accordion" aria-labelledby="item1Header"
+                data-parent="#myAccordion">
+                <div class="card-body">
+                    {{ journals.abstract }}
+
+                    <a href="{{ journals.link }}" target="_blank"> Journal Link </a>
+                </div>
+            </div>
+
+
+
+        </div>
+        {% endfor %}
+
+
+    </div>
 
 
 </div>

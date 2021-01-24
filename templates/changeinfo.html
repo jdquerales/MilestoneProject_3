@@ -5,40 +5,35 @@
 
     <div class="card">
 
-        <h1 class="center">Sign Up</h1>
+        <h1 class="center">Update details</h1>
 
-        <form name="signup_form" method="POST" action="{{ url_for('signup') }}">
+        <form method="POST" action="{{ url_for('changeInfo') }}">
 
             <div class=" form-group">
                 <label for="name">Full Name</label>
-                <input type="text" name="name" class="field" required>
+                <input type="text" name="name" value="{{ session['user']['name'] }}" class="field" required>
             </div>
 
             <div class=" form-group">
                 <label for="username">Username</label>
-                <input type="text" name="username" class="field" required>
+                <input type="text" name="username" value="{{ session['user']['username'] }}" class="field" required>
             </div>
 
             <div class=" form-group">
                 <label for="affiliation">Affiliation</label>
-                <input type="text" name="affiliation" class="field" required>
+                <input type="text" name="affiliation" value="{{ session['user']['affiliation'] }}" class="field" required>
             </div>
 
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" class="field" required>
+                <input type="email" name="email" value="{{ session['user']['email'] }}" class="field" required>
             </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="field" required>
-            </div>
 
-            <p class="error error--hidden"></p>
 
             <div class="form-group">
-                <input type="submit" value="Sign Up" class="btn-form">
+                <input type="submit" value="Submit" class="btn-form">
             </div>
 
         </form>
