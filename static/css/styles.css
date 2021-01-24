@@ -9811,8 +9811,15 @@ hr.light {
 }
 
 .page-subscribe {
-  padding: 8rem 0;
-  height: 40rem;
+  padding: 4rem 0;
+  height: 25rem;
+}
+
+@media (max-width: 992px) {
+.page-subscribe {
+  padding: 4rem 0;
+  height: 120vh;
+}
 }
 
 #mainNav {
@@ -10264,4 +10271,8 @@ div#map {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-item{
+    margin-right: 15px;
 }
