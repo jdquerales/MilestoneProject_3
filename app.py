@@ -5,9 +5,7 @@ from functools import wraps
 from flask_pymongo import PyMongo
 from passlib.hash import pbkdf2_sha256
 import datetime
-from time import gmtime, strftime
 import uuid
-import pymongo
 if os.path.exists("env.py"):
     import env
 
@@ -38,7 +36,7 @@ def login_required(f):
 
 class User:
     def start_session(self, user):
-        del user['password']
+        user['password']
         session['logged_in'] = True
         session['user'] = user
         return jsonify(user), 200
@@ -75,6 +73,18 @@ class User:
                 user['password']):
             return self.start_session(user)
         return jsonify({"error": "Invalid login credentials"}), 401
+
+    def update(self):
+        updated_user = {
+            "name": request.form.get('name').lower(),
+            "username": request.form.get('username').lower(),
+            "email": request.form.get('email').lower(),
+            "affiliation": request.form.get('affiliation'),
+            "password": session['user']['password']
+        }
+        mongo.db.users.update({"_id": session['user']['_id']}, updated_user)
+        flash("User Updated. Changes will be reflected in your next session!")
+        return redirect(url_for('dashboard'))
 
 
 class CreateNewJC:
@@ -131,6 +141,18 @@ def events():
 @app.route('/dashboard')
 @login_required
 def dashboard():
+    return render_template('dashboard.html')
+
+
+@app.route('/changeinfo')
+def changeinfo():
+    return render_template('changeinfo.html')
+
+
+@app.route('/changeinfo', methods=['POST', 'GET'])
+def changeInfo():
+    if request.method == 'POST':
+        return User().update()
     return render_template('dashboard.html')
 
 

@@ -10013,11 +10013,12 @@ input[type=submit] {
 }
 
 .card {
-  margin: 0px 5px 0px 5px;
+  
   box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
   border-radius: 5px;
   background: var(--white);
-  margin: 100px 30% 10px 30%;
+      margin: 80px 30% 10px 30%;
+    padding: 15px;
 }
 
 .card-dashboard {
@@ -10119,7 +10120,7 @@ margin: 10px 20px 10px 20px;
 
 /* subscribe page */
 .subscribepage {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 5px;
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/welcome.jpg");
   background-position: center;
@@ -10132,10 +10133,12 @@ margin: 10px 20px 10px 20px;
 @media (max-width: 450px){
 .subscribepage {
     height: 130vh;
+    padding-top: 150px;
 }
 
 .card {
 margin: 0px 20px 10px 20px;
+padding: 15px 15px 15px 15px;
 }
 
 .card-dashboard {
@@ -10221,7 +10224,11 @@ height: 40%;
     margin: 10px 20px 10px 20px;
 }
 
-.collapse.in, .collapse{
+.collapse.in, .collapse-accordion{
   height: 150px;
   overflow-y: scroll;
+}
+
+.flash-messages {
+    color: red;
 }
