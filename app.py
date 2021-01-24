@@ -86,7 +86,7 @@ class CreateNewJC:
             "abstract": request.form.get('abstract'),
             "link": request.form.get('link'),
             "location": request.form.get('location'),
-            "Added on": datetime.datetime.now().strftime("%d-%m-%Y"),
+            "added_on": datetime.datetime.now().strftime("%d-%m-%Y"),
             "added_by": session['user']['name']
         }
         return db.add_article.insert_one(journal)
@@ -124,7 +124,8 @@ def subscribe():
 
 @app.route('/events')
 def events():
-    return render_template('events.html')
+    journals = list(mongo.db.add_article.find())
+    return render_template('events.html', journals = journals)
 
 
 @app.route('/dashboard')

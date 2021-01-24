@@ -10220,3 +10220,8 @@ height: 40%;
 .card-accordion{
     margin: 10px 20px 10px 20px;
 }
+
+.collapse.in, .collapse{
+  height: 150px;
+  overflow-y: scroll;
+}
