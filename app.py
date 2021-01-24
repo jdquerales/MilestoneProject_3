@@ -4,6 +4,8 @@ from flask import (Flask, flash, render_template, jsonify,
 from functools import wraps
 from flask_pymongo import PyMongo
 from passlib.hash import pbkdf2_sha256
+import datetime
+from time import gmtime, strftime
 import uuid
 import pymongo
 if os.path.exists("env.py"):
@@ -84,6 +86,7 @@ class CreateNewJC:
             "abstract": request.form.get('abstract'),
             "link": request.form.get('link'),
             "location": request.form.get('location'),
+            "Added on": datetime.datetime.now().strftime("%d-%m-%Y"),
             "added_by": session['user']['name']
         }
         return db.add_article.insert_one(journal)
