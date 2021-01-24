@@ -125,7 +125,7 @@ def subscribe():
 @app.route('/events')
 def events():
     journals = list(mongo.db.add_article.find())
-    return render_template('events.html', journals = journals)
+    return render_template('events.html', journals=journals)
 
 
 @app.route('/dashboard')
