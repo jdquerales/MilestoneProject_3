@@ -83,6 +83,7 @@ class CreateNewJC:
             "field_research": request.form.get('field'),
             "abstract": request.form.get('abstract'),
             "link": request.form.get('link'),
+            "location": request.form.get('location'),
             "added_by": session['user']['name']
         }
         return db.add_article.insert_one(journal)
