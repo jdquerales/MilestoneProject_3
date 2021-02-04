@@ -10126,7 +10126,7 @@ margin: 10px 20px 10px 20px;
 
 /* subscribe page */
 .subscribepage {
-  padding-top: 30px;
+  padding-top: 10rem;
   padding-bottom: 5px;
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/welcome.jpg");
   background-position: center;
