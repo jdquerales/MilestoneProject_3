@@ -10270,3 +10270,9 @@ div#map {
 .icon-item{
     margin-right: 15px;
 }
+
+
+#mainNav .active {
+    color:            blue;
+    background-color:  rgba(201, 76, 76, 0.3);
+}
