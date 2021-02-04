@@ -10133,13 +10133,12 @@ margin: 10px 20px 10px 20px;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 450px){
 .subscribepage {
-    height: 130vh;
-    padding-top: 150px;
+    padding-top: 180px;
 }
 
 .card {
@@ -10164,7 +10163,7 @@ height: 40%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* dashboard page */
@@ -10176,18 +10175,12 @@ height: 40%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 
 @media (max-width: 450px){
-.dashboardpage {
-    height: 130vh;
-}
 
-.createpage {
-    height: 130vh;
-}
 
 .card-dashboard h1 {
   margin: 0.5em 0 1em;
@@ -10208,14 +10201,14 @@ height: 40%;
 
 /* event page */
 .eventpage {
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Container flexbox: center container using Flexbox 
