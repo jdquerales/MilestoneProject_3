@@ -10,7 +10,7 @@
 
     <div class="accordion" id="myAccordion">
 
-        {% for journals in journals %}
+        {% for journals in journals|sort(attribute='added_on')  %}.   
         <div class="card card-accordion">
             <div class="card-header" id="item1Header">
 
