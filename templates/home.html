@@ -10,7 +10,7 @@
                 <h1 class="text-uppercase text-white font-weight-bold">Reading and making sense of research papers...
                     together
                 </h1>
-                <hr class="divider my-4" />
+
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 font-weight-light mb-5">
@@ -27,11 +27,12 @@
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
+                <!--
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="/static/assets/img/web.jpg" alt="First slide">
                     <div class="carousel-caption d-block d-md-block">
@@ -39,7 +40,8 @@
                         </h5>
                     </div>
                 </div>
-                <div class="carousel-item">
+                -->
+                <div class="carousel-item active">
                     <img class="d-block w-100" src="/static/assets/img/water.jpg" alt="Second slide">
                     <div class="carousel-caption d-block d-md-block">
                         <h5>Innovative online journal club organization </h5>
@@ -72,14 +74,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center subsBtn" id="newsletter">
                 <h2 class="text-white mt-0">Subscribe for our newsletter to get the lastest updates</h2>
-                <hr class="divider light my-4" />
+
 
                 <!--    Subscription form-->
                 <form name="subscribe_form" method="POST" action="{{ url_for('subscribe') }}">
-                    <input name="subscriptionName" type="text" placeholder="FullName"
+                    <input name="subscriptionName" type="text" placeholder="Your name"
                         class="ng-untouched ng-pristine ng-valid">
                     <span id="subscriptionNameId"></span>
-                    <input name="subscriptionEmail" type="text" placeholder="Email"
+                    <input name="subscriptionEmail" type="text" placeholder=" Your email"
                         class="ng-untouched ng-pristine ng-valid">
                     <span id="subscriptionEmailId"></span>
                     <button class="subscribeBtn" id="subscribeBtnId" type="submit">Subscribe</button>
