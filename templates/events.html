@@ -17,10 +17,9 @@
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                         data-target="#expandable{{loop.index}}" aria-expanded="false"
-                        aria-controls="expandable{{loop.index}}">
+                        aria-controls="expandable{{loop.index}}" id="title-button">
                         {{ journals.title }}
                     </button>
-                    Added by: {{ journals.added_by|capitalize }} on {{ journals.added_on }}
                 </h5>
 
             </div>
@@ -28,6 +27,7 @@
             <div id="expandable{{loop.index}}" class="collapse collapse-accordion" aria-labelledby="item1Header"
                 data-parent="#myAccordion">
                 <div class="card-body">
+                    <p> Added by: {{ journals.added_by|capitalize }} on {{ journals.added_on }} </p>
                     {{ journals.abstract }}
 
                     <a href="{{ journals.link }}" target="_blank"> Journal Link </a>
