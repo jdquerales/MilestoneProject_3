@@ -10,7 +10,8 @@
 
     <div class="accordion" id="myAccordion">
 
-        {% for journals in journals|sort(attribute='added_on')  %}.   
+        <!--    Order items in ascending order based on added_on attribute: -->
+        {% for journals in journals  %}.   
         <div class="card card-accordion">
             <div class="card-header" id="item1Header">
 

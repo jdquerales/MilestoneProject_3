@@ -96,6 +96,7 @@ class CreateNewJC:
             "abstract": request.form.get('abstract'),
             "link": request.form.get('link'),
             "location": request.form.get('location'),
+            "iso_format": datetime.datetime.now(),
             "added_on": datetime.datetime.now().strftime("%d-%m-%Y"),
             "added_by": session['user']['name']
         }
@@ -134,7 +135,7 @@ def subscribe():
 
 @app.route('/events')
 def events():
-    journals = list(mongo.db.add_article.find())
+    journals = list(mongo.db.add_article.find().sort( [("iso_format", -1)] ))
     return render_template('events.html', journals=journals)
 
 
