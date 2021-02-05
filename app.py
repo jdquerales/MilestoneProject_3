@@ -110,7 +110,7 @@ class Subscription:
             {"email": request.form.get("subscriptionEmail").lower()})
 
         if existing_user:
-            flash("Email already subscribed, try another account!")
+            flash("Email already subscribed, try another account!", "danger")
         else:
             new_user = {
                 "_id": uuid.uuid4().hex,
@@ -118,7 +118,7 @@ class Subscription:
                 "email": request.form['subscriptionEmail'].lower(),
             }
             mongo.db.subscribers.insert_one(new_user)
-            flash("Thanks for subscribing ! ")
+            flash("Thanks for subscribing ! ", "success")
 
 
 @app.route("/")
