@@ -27,7 +27,7 @@
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-               <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> -->
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
@@ -79,21 +79,37 @@
                 <!--    Subscription form-->
                 <form name="subscribe_form" method="POST" action="{{ url_for('subscribe') }}">
                     <input name="subscriptionName" type="text" placeholder="Your name"
-                        class="ng-untouched ng-pristine ng-valid">
+                        class="ng-untouched ng-pristine ng-valid" required>
                     <span id="subscriptionNameId"></span>
                     <input name="subscriptionEmail" type="text" placeholder=" Your email"
-                        class="ng-untouched ng-pristine ng-valid">
+                        class="ng-untouched ng-pristine ng-valid" required>
                     <span id="subscriptionEmailId"></span>
                     <button class="subscribeBtn" id="subscribeBtnId" type="submit">Subscribe</button>
                     {% for message in get_flashed_messages() %}
-                    <p>{{ message }}</p>
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <span>{{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     {% endfor %}
+
+
                 </form>
+
+
+
+
 
 
             </div>
         </div>
     </div>
+
+
+
+
+
 </section>
 
 {% endblock %}

@@ -10289,3 +10289,7 @@ a:link {
 #title-button{
      text-decoration: none;
 }
+
+.modal--hidden {
+  display: none;
+}

@@ -135,7 +135,7 @@ def subscribe():
 
 @app.route('/events')
 def events():
-    journals = list(mongo.db.add_article.find().sort( [("iso_format", -1)] ))
+    journals = list(mongo.db.add_article.find().sort([("iso_format", -1)]))
     return render_template('events.html', journals=journals)
 
 

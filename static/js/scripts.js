@@ -44,24 +44,24 @@ $("form[name=signup_form]").submit(function (e) {
     e.preventDefault();
 });
 
-$("form[name=login_form]").submit(function (e) {
-
-    var $form = $(this);
-    var $error = $form.find(".error");
-    var data = $form.serialize();
-
-    $.ajax({
-        url: "/signin",
-        type: "POST",
-        data: data,
-        dataType: "json",
-        success: function (resp) {
-            window.location.href = "/dashboard";
-        },
-        error: function (resp) {
-            $error.text(resp.responseJSON.error).removeClass("error--hidden");
+/*
+$("form[name=subscribe_form]").submit(function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        var data = $form.serialize();
+        var $error = $form.find("p")
+        $.ajax({
+            type : 'POST',
+            data: data,
+            dataType: "json",
+            url : "/",
+            success : function(resp){
+            
+            },
+            error: function (resp) {
+            $error.css("color", "red");
         }
+        });
+        return false;
     });
-
-    e.preventDefault();
-});
+*/

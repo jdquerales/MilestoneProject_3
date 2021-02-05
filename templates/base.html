@@ -25,24 +25,32 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container" id="mobileNavBar">
-            <a class="navbar-brand js-scroll-trigger" href="{{ url_for('home') }}"> <img src="static/assets/img/logo_transparent.png" width="auto" height="200px" class=".img-fluid"> </a>
+            <a class="navbar-brand js-scroll-trigger" href="{{ url_for('home') }}"> <img
+                    src="static/assets/img/logo_transparent.png" width="auto" height="200px" class=".img-fluid"> </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('events') }}" >Events</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('events') }}">Events</a>
+                    </li>
                     {% if session.user %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('dashboard') }}">My Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('create') }}">Add Article</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('dashboard') }}">My
+                            Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('create') }}">Add
+                            Article</a></li>
                     {% endif %}
                     {% if not session.user %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signup') }}">Sign Up</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signin') }}">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signup') }}">Sign
+                            Up</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signin') }}">Sign
+                            In</a></li>
                     {% endif %}
                     {% if session.user %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signout') }}">Sign Out</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signout') }}">Sign
+                            Out</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -57,45 +65,47 @@
     <section class="page-section page-subscribe " id="contact">
 
         <div class="row sections-container">
-          <div class="col-lg-4 social-links">
-            <h3 class="footer-titles mt-0">About Us</h3>
-            <p class="inline-block  text-muted mb-5">
-              JournalClub is a web based platform to host, 
-              start and organize journal club complete life cycle
-              with the opportunity to perform all required steps of journal club in a web based application.
-            </p>
-          </div>
-
-
-          <div class="col-lg-4 social-links">
-            <h3 class="footer-titles mt-0">Let's Get In Touch!</h3>
-            
-
-            <div class="map-container">
-                    <p class="inline-block  text-muted mb-5"> <i class="fas fa-phone fa-3x mb-3 text-muted icon-item"></i> +1 (555) 123-4567</p>
-            </div>
-             
-              <div class="map-container">
-                    <p class="inline-block  text-muted mb-5"> <i class="fas fa-envelope fa-3x mb-3 text-muted icon-item"></i> contact@journalclub.com </p>
+            <div class="col-lg-4 social-links">
+                <h3 class="footer-titles mt-0">About Us</h3>
+                <p class="inline-block  text-muted mb-5">
+                    JournalClub is a web based platform to host,
+                    start and organize journal club complete life cycle
+                    with the opportunity to perform all required steps of journal club in a web based application.
+                </p>
             </div>
 
-          </div>
 
             <div class="col-lg-4 social-links">
-            <h3 class="footer-titles mt-0">Where we are?</h3>
-            
-            <div id="map" class="map-container"></div>
-
-			</div>
-
-          </div>
+                <h3 class="footer-titles mt-0">Let's Get In Touch!</h3>
 
 
-       
+                <div class="map-container">
+                    <p class="inline-block  text-muted mb-5"> <i
+                            class="fas fa-phone fa-3x mb-3 text-muted icon-item"></i> +1 (555) 123-4567</p>
+                </div>
+
+                <div class="map-container">
+                    <p class="inline-block  text-muted mb-5"> <i
+                            class="fas fa-envelope fa-3x mb-3 text-muted icon-item"></i> contact@journalclub.com </p>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 social-links">
+                <h3 class="footer-titles mt-0">Where we are?</h3>
+
+                <div id="map" class="map-container"></div>
+
+            </div>
+
+        </div>
 
 
 
-       
+
+
+
+
     </section>
 
     <!-- Footer-->
@@ -108,13 +118,13 @@
 
     <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 
-	<script defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRLbEkCc7-poNiXhu7kF83J3O5UnVZ8vA&callback=initMap">
-	</script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRLbEkCc7-poNiXhu7kF83J3O5UnVZ8vA&callback=initMap">
+        </script>
 
-   <script src="static/js/maps.js">
-	
-   </script>
+    <script src="static/js/maps.js">
+
+    </script>
 
     <script src="static/js/scripts.js"></script>
 </body>
