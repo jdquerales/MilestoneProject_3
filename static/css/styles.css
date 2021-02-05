@@ -10281,3 +10281,7 @@ div#map {
     color:            blue;
     background-color:  rgba(201, 76, 76, 0.3);
 }
+
+a:link {
+  text-decoration: none;
+}
