@@ -14,9 +14,10 @@
         {% for journals in journals  %}.   
         <div class="card card-accordion">
             <div class="card-header" id="item1Header">
-
+             {% if session['user']['name'] == journals.added_by|lower %}
                 <a class="btn btn-primary btn-sm">Done</a>
                 <a href="{{ url_for( 'edit', event_id = journals._id ) }}" class="btn btn-warning btn-sm">Edit</a>
+             {% endif %}
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                         data-target="#expandable{{loop.index}}" aria-expanded="false"

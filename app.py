@@ -39,20 +39,15 @@ class User:
         user['password']
         session['logged_in'] = True
         session['user'] = user
-        return redirect(url_for('dashboard'))
+        return redirect(url_for("dashboard"))
 
     def signup(self):
-        print(request.form)
-
         user = {
             "_id": uuid.uuid4().hex,
-            "name": request.form.get('name').lower(),
-            "username": request.form.get('username').lower(),
-            "email": request.form.get('email').lower(),
-            "affiliation": request.form.get('affiliation'),
+            "name": request.form.get('name'),
+            "email": request.form.get('email'),
             "password": request.form.get('password')
         }
-
 # Encrypt the password
         user['password'] = pbkdf2_sha256.encrypt(user['password'])
         # Check for existing email address
@@ -182,12 +177,16 @@ def signout():
     return User().signout()
 
 
-@app.route('/signup', methods=['POST', 'GET'])
+@app.route('/signup')
 def signup():
+    return render_template('signup.html')
+
+
+@app.route('/signup', methods=['POST', 'GET'])
+def signUp():
     if request.method == 'POST':
         return User().signup()
-
-    return render_template("signup.html")
+    return redirect(url_for('dashboard'))
 
 
 @app.route("/create")
