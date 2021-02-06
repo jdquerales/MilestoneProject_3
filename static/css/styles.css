@@ -1,8 +1,4 @@
-/*
-
-Import google fonts
-
-*/
+/* Import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
@@ -10,12 +6,18 @@ Import google fonts
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-
-/*
-
-StartBootstrap template:
-
+/*!
+* Start Bootstrap - Creative v6.0.4 (https://startbootstrap.com/theme/creative)
+* Copyright 2013-2020 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
 */
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -116,7 +118,6 @@ abbr[data-original-title] {
   cursor: help;
   border-bottom: 0;
   -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
 }
 
 address {
@@ -524,7 +525,6 @@ mark,
 code {
   font-size: 87.5%;
   color: #e83e8c;
-  word-wrap: break-word;
 }
 a > code {
   color: inherit;
@@ -9446,6 +9446,7 @@ button.bg-dark:focus {
     margin-left: auto !important;
   }
 }
+
 .stretched-link::after {
   position: absolute;
   top: 0;
@@ -9544,6 +9545,7 @@ button.bg-dark:focus {
     text-align: center !important;
   }
 }
+
 .text-lowercase {
   text-transform: lowercase !important;
 }
@@ -9676,10 +9678,12 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: none !important;
 }
 
+/*
 .text-break {
   word-break: break-word !important;
   word-wrap: break-word !important;
 }
+*/
 
 .text-reset {
   color: inherit !important;
@@ -9826,7 +9830,6 @@ hr.light {
   min-height: 40vh;
 }
 
-
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: background-color 0.2s ease;
@@ -9961,6 +9964,10 @@ header.masthead h1 {
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }
+
+
+/* From here my custumization of CSS styles are presented */
+
 
 /* Forms */
 
@@ -10293,3 +10300,10 @@ a:link {
 .modal--hidden {
   display: none;
 }
+
+#flash-alerts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
