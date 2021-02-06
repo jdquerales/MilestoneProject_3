@@ -71,6 +71,9 @@ class User:
                 request.form.get('password'),
                 user['password']):
             return self.start_session(user)
+        else:
+            flash("Invalid login credentials", "danger")
+            return redirect(url_for("signin"))
         return jsonify({"error": "Invalid login credentials"}), 401
 
     def update(self):
