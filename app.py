@@ -118,7 +118,6 @@ class CreateNewJC:
         return db.add_article.update({"_id":event_id},submission)
 
     def delete(self, event_id):
-        flash("Journal Club has been removed!")
         return db.add_article.remove({"_id":event_id})
 
 
