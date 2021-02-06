@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="card-wrapper createpage">
+
+    <div class="card">
+
+        <h3 class="center">Edit JC Event</h3>
+
+        <form name="edition_form" method="POST" action="{{ url_for('edit', event_id=journals._id) }}">
+
+            <div class=" form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="field" required>
+            </div>
+            <div class="form-group">
+                <!-- Bootstrap Select menu-->
+                <select class="form-control" id="field" name="field">
+                    <option value="" disabled selected>Select Field of Research</option>
+                    {% for category in categories %}
+                    <option value="{{ category.field }}"> {{ category.field }} </option>
+                    {% endfor %}
+
+                </select>
+            </div>
+            <div class=" form-group">
+                <label for="abstract" class="form-label">Add a brief description of the article</label>
+                <textarea class="form-control" name="abstract" id="abstract" rows="3"></textarea>
+            </div>
+
+            <div class=" form-group">
+                <label for="link" class="form-label">Journal Link</label>
+                <input class="form-control field" name="link" id="link" required>
+            </div>
+
+            <div class=" form-group">
+                <label for="location">Location and schedule</label>
+                <input type="text" name="location" class="field" required>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Edit event" class="btn-form">
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
