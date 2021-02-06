@@ -39,7 +39,7 @@ class User:
         user['password']
         session['logged_in'] = True
         session['user'] = user
-        return jsonify(user), 200
+        return redirect(url_for('dashboard'))
 
     def signup(self):
         print(request.form)
@@ -101,6 +101,19 @@ class CreateNewJC:
             "added_by": session['user']['name']
         }
         return db.add_article.insert_one(journal)
+
+    def edition(self, event_id):
+        submission = {
+            "title": request.form.get('title'),
+            "field_research": request.form.get('field'),
+            "abstract": request.form.get('abstract'),
+            "link": request.form.get('link'),
+            "location": request.form.get('location'),
+            "iso_format": datetime.datetime.now(),
+            "added_on": datetime.datetime.now().strftime("%d-%m-%Y"),
+            "added_by": session['user']['name']
+        }
+        return db.add_article.update({"_id":event_id},submission)
 
 
 class Subscription:
@@ -188,6 +201,22 @@ def createJC():
     if request.method == 'POST':
         CreateNewJC().submission()
     return render_template("dashboard.html")
+
+
+@app.route("/edit/<event_id>")
+def edit(event_id):
+    journals = mongo.db.add_article.find_one({"_id":event_id})
+    categories = mongo.db.field_research.find().sort("field_research", 1)
+    if request.method == "POST":
+        CreateNewJC().edition(event_id)
+    return render_template('edit.html', journals=journals, categories=categories)
+
+
+@app.route("/edit/<event_id>", methods=["GET","POST"])
+def edit_update(event_id):
+    if request.method == "POST":
+        CreateNewJC().edition(event_id)
+    return redirect(url_for('events'))
 
 
 if __name__ == "__main__":
