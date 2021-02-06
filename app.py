@@ -110,6 +110,9 @@ class CreateNewJC:
         }
         return db.add_article.update({"_id":event_id},submission)
 
+    def delete(self, event_id):
+        return db.add_article.remove({"_id":event_id})
+
 
 class Subscription:
     def subscriber(self):
@@ -215,6 +218,12 @@ def edit(event_id):
 def edit_update(event_id):
     if request.method == "POST":
         CreateNewJC().edition(event_id)
+    return redirect(url_for('events'))
+
+
+@app.route("/delete/<event_id>")
+def delete(event_id):
+    CreateNewJC().delete(event_id)
     return redirect(url_for('events'))
 
 
