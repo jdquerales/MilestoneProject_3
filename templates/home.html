@@ -21,7 +21,7 @@
                 <div class="accordion" id="myAccordion">
 
         <!--    Order items in ascending order based on added_on attribute: -->
-        
+         {% if journals is defined and journals[0] is defined %}
         <div class="card card-accordion">
             <div class="card-header" id="item1Header">
                 <h5 class="mb-0">
@@ -35,7 +35,7 @@
                 </h5>
 
             </div>
-
+           
             <div id="expandable" class="collapse collapse-accordion" aria-labelledby="item1Header"
                 data-parent="#myAccordion">
                 <div class="card-body">
@@ -43,10 +43,11 @@
                     <a href="{{ journals[0].link }}" target="_blank"> Journal Link </a>
                 </div>
             </div>
+           
 
 
         </div>
-        
+         {% endif %}
 
 
     </div>
