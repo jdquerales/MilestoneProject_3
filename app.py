@@ -111,6 +111,7 @@ class CreateNewJC:
         return db.add_article.update({"_id":event_id},submission)
 
     def delete(self, event_id):
+        flash("Journal Club has been removed!")
         return db.add_article.remove({"_id":event_id})
 
 
@@ -134,8 +135,9 @@ class Subscription:
 
 @app.route("/")
 def home():
-    return render_template('home.html')
-
+    journals = list(mongo.db.add_article.find().sort([("iso_format", -1)]))
+    return render_template('home.html', journals=journals)
+    
 
 @app.route('/home', methods=['POST', 'GET'])
 def subscribe():

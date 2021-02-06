@@ -17,6 +17,40 @@
                 </p>
                 <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ url_for('signup') }}">Sign Up now!</a>
             </div>
+
+                <div class="accordion" id="myAccordion">
+
+        <!--    Order items in ascending order based on added_on attribute: -->
+        
+        <div class="card card-accordion">
+            <div class="card-header" id="item1Header">
+                <h5 class="mb-0">
+                    Latest Journal Article Added: 
+
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#expandable" aria-expanded="false"
+                        aria-controls="expandable" id="title-button">
+                        {{ journals[0].title }}
+                    </button>
+                </h5>
+
+            </div>
+
+            <div id="expandable" class="collapse collapse-accordion" aria-labelledby="item1Header"
+                data-parent="#myAccordion">
+                <div class="card-body">
+                    <p> Added by: {{ journals[0].added_by|lower }} on {{ journals[0].added_on }} </p>
+                    <a href="{{ journals[0].link }}" target="_blank"> Journal Link </a>
+                </div>
+            </div>
+
+
+        </div>
+        
+
+
+    </div>
+
         </div>
     </div>
 </header>
