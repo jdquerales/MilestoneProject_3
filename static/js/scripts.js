@@ -21,7 +21,7 @@ $(function () {
     });
 });
 
-
+/*
 $("form[name=signup_form]").submit(function (e) {
 
     var $form = $(this);
@@ -33,9 +33,6 @@ $("form[name=signup_form]").submit(function (e) {
         type: "POST",
         data: data,
         dataType: "json",
-        success: function (resp) {
-            window.location.href = "/dashboard"
-        },
         error: function (resp) {
             $error.text(resp.responseJSON.error).removeClass("error--hidden");
         }
@@ -43,6 +40,7 @@ $("form[name=signup_form]").submit(function (e) {
 
     e.preventDefault();
 });
+*/
 
 /*
 $("form[name=subscribe_form]").submit(function (e) {

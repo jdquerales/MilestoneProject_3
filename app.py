@@ -44,17 +44,21 @@ class User:
     def signup(self):
         user = {
             "_id": uuid.uuid4().hex,
-            "name": request.form.get('name'),
-            "email": request.form.get('email'),
+            "name": request.form.get('name').lower(),
+            "username": request.form.get('username').lower(),
+            "email": request.form.get('email').lower(),
+            "affiliation": request.form.get('affiliation'),
             "password": request.form.get('password')
         }
 # Encrypt the password
         user['password'] = pbkdf2_sha256.encrypt(user['password'])
         # Check for existing email address
         if db.users.find_one({"email": user['email']}):
-            return jsonify({"error": "Email address already in use"}), 400
+            flash("Email address already in use", "danger")
+            return redirect(url_for("signup"))
         if db.users.insert_one(user):
-            return self.start_session(user)
+            flash("User succefully created", "success")
+            return redirect(url_for("signup"))
         return jsonify({"error": "Signup failed"}), 400
 
     def signout(self):

@@ -10307,6 +10307,12 @@ a:link {
   justify-content: center;
 }
 
+.flash-messages-div {
+     display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn-sm {
     margin: 5px;
 }

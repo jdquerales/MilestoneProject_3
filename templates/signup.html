@@ -37,9 +37,27 @@
 
             <p class="error error--hidden"></p>
 
+
+            
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div id="flash-alerts" class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                <span id="span-flashes">{{ message }}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+
             <div class="form-group">
                 <input type="submit" value="Sign Up" class="btn-form">
             </div>
+
 
         </form>
 
