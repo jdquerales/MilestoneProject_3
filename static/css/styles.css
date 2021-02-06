@@ -10316,3 +10316,9 @@ a:link {
 .btn-sm {
     margin: 5px;
 }
+
+.carousel-inner .carousel-item {
+   -webkit-transition: 0s !important;
+    -o-transition: 0s !important;
+    transition: 0s !important;
+}
