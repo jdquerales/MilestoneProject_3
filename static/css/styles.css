@@ -10307,3 +10307,6 @@ a:link {
   justify-content: center;
 }
 
+.btn-sm {
+    margin: 5px;
+}
