@@ -32,25 +32,25 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('home') }}">Home</a>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('home') }}"> <i class="fas fa-home icon-item-navbar" style="font-size: 1.2em;"></i> Home</a>
                     </li>
                     {% if session.user %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('events') }}">Events</a>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('events') }}"><i class="fas fa-calendar-check icon-item-navbar" style="font-size: 1.2em;"></i> Events</a>
                     </li>
                     
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('dashboard') }}">My
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('dashboard') }}"> <i class="far fa-user icon-item icon-item-navbar" style="font-size: 1.2em;"></i> My
                             Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('create') }}">Add
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('create') }}"><i class="fas fa-folder-plus icon-item-navbar" style="font-size: 1.2em;"></i> Add
                             Article</a></li>
                     {% endif %}
                     {% if not session.user %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signup') }}">Sign
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signup') }}"><i class="fas fa-user-plus icon-item-navbar" style="font-size: 1.2em;"></i> Sign
                             Up</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signin') }}">Sign
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signin') }}"><i class="fas fa-sign-in-alt icon-item-navbar" style="font-size: 1.2em;"></i> Sign
                             In</a></li>
                     {% endif %}
                     {% if session.user %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signout') }}">Sign
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url_for('signout') }}"><i class="fas fa-sign-out-alt icon-item-navbar" style="font-size: 1.2em;"></i> Sign
                             Out</a></li>
                     {% endif %}
                 </ul>
