@@ -21,7 +21,8 @@
 
             <div class=" form-group">
                 <label for="affiliation">Affiliation</label>
-                <input type="text" name="affiliation" value="{{ session['user']['affiliation'] }}" class="field" required>
+                <input type="text" name="affiliation" value="{{ session['user']['affiliation'] }}" class="field"
+                    required>
             </div>
 
 
@@ -29,34 +30,37 @@
                 <label for="email">Email</label>
                 <input type="email" name="email" value="{{ session['user']['email'] }}" class="field" required>
             </div>
-            
-<div class="form-group">
-<button type="button" class="btn btn-primary btn-sm btn-form" data-toggle="modal" data-target="#exampleModal">Save changes</button>
-</div>
-            
+
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-sm btn-form" data-toggle="modal"
+                    data-target="#exampleModal">Save changes</button>
+            </div>
+
 
             <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirm user info update</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Do you still want to change your account details?
-      </div>
-      <div class="modal-footer">
-          
-                <button class="btn btn-primary btn-sm" data-dismiss="modal">No, I've changed my mind</button>
-                <input type="submit" value="Yes, save changes" class="btn btn-danger btn-sm">  
-           
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Confirm user info update</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Do you still want to change your account details?
+                        </div>
+                        <div class="modal-footer">
+
+                            <button class="btn btn-primary btn-sm" data-dismiss="modal">No, I've changed my
+                                mind</button>
+                            <input type="submit" value="Yes, save changes" class="btn btn-danger btn-sm">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
