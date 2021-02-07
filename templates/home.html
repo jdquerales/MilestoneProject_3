@@ -18,39 +18,39 @@
                 <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ url_for('signup') }}">Sign Up now!</a>
             </div>
 
-                <div class="accordion" id="myAccordion">
+            <div class="accordion" id="myAccordion">
 
-        <!--    Order items in ascending order based on added_on attribute: -->
-         {% if journals is defined and journals[0] is defined %}
-        <div class="card card-accordion">
-            <div class="card-header" id="item1Header">
-                <h5 class="mb-0">
-                    Latest Journal Article Added: 
+                <!--    Order items in ascending order based on added_on attribute: -->
+                {% if journals is defined and journals[0] is defined %}
+                <div class="card card-accordion">
+                    <div class="card-header" id="item1Header">
+                        <h5 class="mb-0">
+                            Latest Journal Article Added:
 
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#expandable" aria-expanded="false"
-                        aria-controls="expandable" id="title-button">
-                        {{ journals[0].title }}
-                    </button>
-                </h5>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#expandable" aria-expanded="false" aria-controls="expandable"
+                                id="title-button">
+                                {{ journals[0].title }}
+                            </button>
+                        </h5>
 
-            </div>
-           
-            <div id="expandable" class="collapse collapse-accordion" aria-labelledby="item1Header"
-                data-parent="#myAccordion">
-                <div class="card-body">
-                    <p> Added by: {{ journals[0].added_by|lower }} on {{ journals[0].added_on }} </p>
-                    <a href="{{ journals[0].link }}" target="_blank"> Journal Link </a>
+                    </div>
+
+                    <div id="expandable" class="collapse collapse-accordion" aria-labelledby="item1Header"
+                        data-parent="#myAccordion">
+                        <div class="card-body">
+                            <p> Added by: {{ journals[0].added_by|lower }} on {{ journals[0].added_on }} </p>
+                            <a href="{{ journals[0].link }}" target="_blank"> Journal Link </a>
+                        </div>
+                    </div>
+
+
+
                 </div>
+                {% endif %}
+
+
             </div>
-           
-
-
-        </div>
-         {% endif %}
-
-
-    </div>
 
         </div>
     </div>
@@ -86,7 +86,7 @@
                 <div class="carousel-item">
                     <img class="d-block w-100" src="/static/assets/img/web.jpg" alt="Third slide">
                     <div class="carousel-caption d-block d-md-block">
-                       <h3 class="text-carousel"> Provide a unique literature reading and mining tool</h3>
+                        <h3 class="text-carousel"> Provide a unique literature reading and mining tool</h3>
                     </div>
                 </div>
             </div>
