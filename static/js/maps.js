@@ -1,3 +1,5 @@
+// This function will render Google Maps and markers on all templates
+
 function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 2,
@@ -8,6 +10,8 @@ function initMap() {
     });
 
     var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// Here I define random locations to be marked on Google Maps
 
     var locations = [
         { lat: -34.6083, lng: -58.3712 },
