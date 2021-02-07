@@ -219,7 +219,7 @@ def edit(event_id):
     categories = mongo.db.field_research.find().sort("field_research", 1)
     if request.method == "POST":
         CreateNewJC().edition(event_id)
-    return render_template('edit.html', journals=journals, categories=categories)
+    return render_template("edit.html", journals=journals, categories=categories)
 
 
 @app.route("/edit/<event_id>", methods=["GET","POST"])
