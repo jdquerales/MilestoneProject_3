@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap');
 
 /*!
 * Start Bootstrap - Creative v6.0.4 (https://startbootstrap.com/theme/creative)
@@ -83,7 +83,7 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: "Lato", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2;
 }
 
@@ -9822,7 +9822,7 @@ hr.light {
 
 .page-section {
   padding: 0rem 0;
-  min-height: 30vh;
+  min-height: 10vh;
 }
 
 .page-subscribe {
@@ -9842,7 +9842,7 @@ hr.light {
 #mainNav .navbar-nav .nav-item .nav-link {
   color: orange;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 1.3rem;
   padding: 0.75rem 0;
 }
@@ -10188,7 +10188,7 @@ margin: 0px 20px 10px 20px;
 height: 40%;
 color: var(--white);
     font-family: "Lato", sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.2;
 }
 
@@ -10227,7 +10227,7 @@ color: var(--white);
   margin: 0.5em 0 1em;
   color: var(--white);
     font-family: "Lato", sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.2;
 }
 
@@ -10235,7 +10235,7 @@ color: var(--white);
   margin: 0.5em 0 1em;
   color: var(--white);
     font-family: "Lato", sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.2;
 }
 
@@ -10352,4 +10352,11 @@ a:link {
    -webkit-transition: 0s !important;
     -o-transition: 0s !important;
     transition: 0s !important;
+}
+
+.text-carousel {
+    color: #FFD662FF;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
 }
