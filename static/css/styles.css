@@ -10300,7 +10300,8 @@ html, body {
 
 div#map {
     min-height: 200px;
-    width: 100%;
+    margin-left: 5%;
+    width: 90%;
 }
 
 .map-container{
