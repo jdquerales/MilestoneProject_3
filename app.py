@@ -57,7 +57,7 @@ class User:
             flash("Email address already in use", "danger")
             return redirect(url_for("signup"))
         if db.users.insert_one(user):
-            flash("User succefully created", "success")
+            flash("User successfully created", "success")
             return redirect(url_for("signup"))
         return jsonify({"error": "Signup failed"}), 400
 
