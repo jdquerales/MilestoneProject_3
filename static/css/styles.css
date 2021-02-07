@@ -10025,7 +10025,7 @@ input[type=submit] {
 
 .card-wrapper-dashboard {
   margin: 0 auto;
-  padding: 90px 30px;
+  padding: 0px 30px;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
@@ -10037,7 +10037,7 @@ input[type=submit] {
   box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
   border-radius: 5px;
   background: var(--white);
-      margin: 80px 30% 10px 30%;
+margin: 80px 30% 10px 30%;
     padding: 15px;
 }
 
@@ -10049,6 +10049,30 @@ input[type=submit] {
   border-radius: 5px;
   background: var(--white);
   height: 50%;
+  background-color: #606060;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-dashboard-listing {
+  margin: 0 30px 10px;
+  padding: 20px 40px;
+  width: 980px;
+  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  background: var(--white);
+  height: 50%;
+  background-color: #606060;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 1100px){
+    .card-dashboard-listing {
+    width: 460px;
+    }
 }
 
 @media (max-width: 700px){
@@ -10160,8 +10184,12 @@ padding: 15px 15px 15px 15px;
 }
 
 .card-dashboard {
-margin: 30px 20px 10px 20px;
+margin: 0px 20px 10px 20px;
 height: 40%;
+color: var(--white);
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 
@@ -10197,16 +10225,18 @@ height: 40%;
 
 .card-dashboard h1 {
   margin: 0.5em 0 1em;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--almost-black);
+  color: var(--white);
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .card-dashboard h2 {
   margin: 0.5em 0 1em;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--almost-black);
+  color: var(--white);
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 

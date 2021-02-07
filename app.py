@@ -161,7 +161,8 @@ def events():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    journals = list(mongo.db.add_article.find().sort([("iso_format", -1)]))
+    return render_template('dashboard.html', journals=journals)
 
 
 @app.route('/changeinfo')
