@@ -10010,7 +10010,6 @@ label {
 }
 
 input[type=submit] {
-  margin: 34px auto 24px;
   display: block;
 }
 
@@ -10132,6 +10131,7 @@ margin: 10px 20px 10px 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
 }
+
 
 @media (max-width: 480px){
 .subsBtn input {

@@ -3,72 +3,71 @@
 {% block content %}
 <div class="dashboardpage">
 
-<div class="card-wrapper-dashboard ">
+    <div class="card-wrapper-dashboard ">
 
-    <div class="card card-dashboard">
+        <div class="card card-dashboard">
 
-        <h1 class="center">Current Status</h1>
-        <p class="center">You are currently logged in.</p>
+            <h1 class="center">Current Status</h1>
+            <p class="center">You are currently logged in.</p>
 
-        <div class="center">
-            <a href="{{ url_for('signout') }}" class="btn-form btn--secondary">Sign Out</a>
+            <div class="center">
+                <a href="{{ url_for('signout') }}" class="btn-form btn--secondary">Sign Out</a>
+            </div>
+
+        </div>
+
+        <div class="card card-dashboard">
+
+            <h1 class="center">Your Info</h1>
+
+            <p>
+                <!--<strong>ID:</strong> {{ session['user']['_id'] }}<br>-->
+                <strong>Name:</strong> {{ session['user']['name'] }}<br>
+                <strong>Username:</strong> {{ session['user']['username'] }}<br>
+                <strong>Email:</strong> {{ session['user']['email'] }}<br>
+                <strong>Affiliation:</strong> {{ session['user']['affiliation'] }}
+            </p>
+
+            <div class="center">
+                <a href="{{ url_for('changeinfo') }}" class="btn-form btn--secondary">Edit profile</a>
+            </div>
+
+            {% for message in get_flashed_messages() %}
+            <p class="flash-messages">{{ message }}</p>
+            {% endfor %}
+
         </div>
 
     </div>
-
-    <div class="card card-dashboard">
-
-        <h1 class="center">Your Info</h1>
-
-        <p>
-            <!--<strong>ID:</strong> {{ session['user']['_id'] }}<br>-->
-            <strong>Name:</strong> {{ session['user']['name'] }}<br>
-            <strong>Username:</strong> {{ session['user']['username'] }}<br>
-            <strong>Email:</strong> {{ session['user']['email'] }}<br>
-            <strong>Affiliation:</strong> {{ session['user']['affiliation'] }}
-        </p>
-
-        <div class="center">
-            <a href="{{ url_for('changeinfo') }}" class="btn-form btn--secondary">Edit profile</a>
-        </div>
-
-        {% for message in get_flashed_messages() %}
-        <p class="flash-messages">{{ message }}</p>
-        {% endfor %}
-
-    </div>
-
-</div>
 
     <div class="card-wrapper-dashboard ">
 
-    <div class="card card-dashboard-listing">
-        <h1 class="center">Your Articles</h1>
+        <div class="card card-dashboard-listing">
+            <h1 class="center">Your Articles</h1>
 
-        {% for journals in journals  %}
-       
-               {% if session['user']['name'] == journals.added_by|lower %}       
-     <ul>
-       <li>   {{ journals.title }}, added on: <mark> {{ journals.added_on }} </mark>   </li>
+            {% for journals in journals  %}
 
-     </ul>
+            {% if session['user']['name'] == journals.added_by|lower %}
+            <ul>
+                <li> {{ journals.title }}, added on: <mark> {{ journals.added_on }} </mark> </li>
 
-    
-     {% endif %}
+            </ul>
 
-      {% endfor %}
 
-               <div class="center">
-            <a href="{{ url_for('events') }}" class="btn-form btn--secondary">Manage Articles</a>
+            {% endif %}
+
+            {% endfor %}
+
+            <div class="center">
+                <a href="{{ url_for('events') }}" class="btn-form btn--secondary">Manage Articles</a>
+            </div>
+
         </div>
+
 
     </div>
 
-
 </div>
-
-</div>
-
 
 
  
