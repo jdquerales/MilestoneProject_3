@@ -97,7 +97,8 @@ As derived from the strategy table (Importance < Viability), I am unable to put 
 ## Skeleton:
 
 I used **Balsamiq** software to create my initial wireframes, starting with the mobile and desktop design as an overall idea and helping me to make the design responsive afterwards.
-
+The deployed application slightly differs from the initial
+wireframes as some of the features were evolving as I was working on the development.
 
 [Desktop wireframe](/static/assets/wireframes/MS3_desktop.pdf)
 
@@ -106,7 +107,24 @@ I used **Balsamiq** software to create my initial wireframes, starting with the 
 [Mobile wireframe](/static/assets/wireframes/MS3_mobile.pdf)
 
 
-## Data model
+## Data Modeling (MongoDB Atlas)
+
+Keeping in mind that the main challenge in data modeling is balancing the needs
+of the application, the performance characteristics of the database engine, 
+and the data retrieval patterns. I adopted the the philosophy that
+while designing my data model I would consider the application usage of the data
+(i.e. queries, updates, and processing of the data) as well as the inherent 
+structure of the data itself. The database engine used in this project is MongoBD Atlas.
+MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, 
+MongoDB uses JSON-like documents with optional schemas. 
+
+The **JournalClub** single collection hosted in MongoDB is conformed by
+four documents: **users**, **add_article**, **field_reasearch** and **subscribers**. Each of
+these documents contains unique attributes, and relationships between 
+documents are also present. In the following diagram my data model is shown. Note
+that relationships between 3 of the documents are exist, while the **subscribers**
+document is not related to the others.
+
 
 ![data model](/static/assets/img/datamodel.png)
 
