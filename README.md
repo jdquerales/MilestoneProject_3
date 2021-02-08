@@ -30,6 +30,39 @@ I used **Balsamiq** software to create my initial wireframes, starting with the 
 
 ![python validation](/static/assets/code_validation/python_pep8.png)
 
+## Libraries and Tools Used 
+
+- [Bootstrap (4.5.2)](https://getbootstrap.com/)
+    - The project uses **Bootstrap** to design and customize responsive mobile-first sites.
+- [JQuery (3.5.1)](https://jquery.com/)
+    - This project uses **JQuery** JavaScript library, to manupulate 
+    the HTML document (DOM API) and add interactivity in a much simpler way. 
+- [Google Maps JavaScript](https://developers.google.com/maps/documentation/javascript/overview)
+    - This project uses the Google Maps JavaScript API.
+- [Balsamiq](https://balsamiq.com/wireframes/)
+    - The project uses **Balsamiq** as wireframing tool.
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/)
+    - I use **Chrome DevTools** to inspect and test styling and responsive desing during my development process.
+- [W3C](https://validator.w3.org)
+    - I use **W3C** to check the HTML and CSS files.
+- [JSHint](https://jshint.com/)
+    - I use **JSHint** to check the JS files.
+- [PEP8](http://pep8online.com/)
+    - I use **PEP8 online** to check and validate the Python script files.
+- [AmIResponsive](http://ami.responsivedesign.is)
+    - I use **Am I Responsive?** to check my responsive design and take screenshots of the deployed website.
+- [Fontawesome](https://fontawesome.com)
+    - This project uses **FontAwesome** for including vector icons and social logos.
+- [GoogleFonts](https://fonts.google.com)
+    - This project uses **GoogleFonts** to import the font styles.
+- [GitHub](https://github.com)
+    - I used **GitHub** as my project repository.
+- [GitPod](https://www.gitpod.io)
+    - I used **GitPod** as the cloud-based development environment to write my code.
+- [Heroku](https://www.heroku.com)
+    - I used **Heroku** to deploy my project.
+- [MongoDB](https://www.mongodb.com/2)
+    - I used **MongoDB Atlas** to create and manage the non-relational database in this project.
 
 ## Deployment
 
