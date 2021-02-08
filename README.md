@@ -162,6 +162,31 @@ document is not related to the others.
 
 ![data model](/static/assets/img/datamodel.png)
 
+## Code style and reusability (Object-oriented Programming in Python)
+
+During the writing and development of the Python code in this project, I adopted
+the object oriented programming (OOP) paradigm. Using OOP improves 
+software-development productivity as it is
+modular by providing separation of duties in object-based program development.
+It is also extensible, as objects can be extended to include new attributes and
+behaviors. Objects can also be reused within an across applications. Because of
+these three factors – modularity, extensibility, and reusability – OOP provides
+improved software-development productivity over traditional
+procedure-based programming techniques. OOP also improves software 
+maintainability.
+
+The **app.py** file contains the following classes and methods:
+
+
+Class | Methods
+------------ | -------------------------
+User | start_session, signup, signout, login, update
+CreateNewJC | submission, delete, edition
+Subscription | subscriber
+
+
+
+
 ## Code validation
 ![python validation](/static/assets/code_validation/css_w3c.png)
 
