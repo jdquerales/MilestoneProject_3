@@ -32,9 +32,9 @@ I used **Balsamiq** software to create my initial wireframes, starting with the 
 
 ## Technologies Used
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
     - The project uses **HTML** as building block.
-- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
     - The project uses **Cascading Style Sheets (CSS)** for adding style to the website.
 - [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
     - The project uses **JavaScript (JS)** for adding interactivity to the website.
