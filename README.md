@@ -1,4 +1,11 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
+<img src="/static/assets/img/logo_2.png" alt="drawing" width="200"/>
+
+
+
+## Stream Three Project: Data-Centric Development - Code Institute
+
+This is the second milestone project of my journey as a Software Developer in Code Institute.
 
 ## Data model
 
