@@ -60,12 +60,39 @@ other fellows.(**COMMENTS/CREATE**).
 
 Beside the provided solution to the user of the application, it will also provide
 a value to the owner of the application:
- 
+
 #### As a site owner:
 
 -  I want to be contacted by users in order to organise meet-ups and
 networking activities (**VALUE PROVIDED**).
 
+## Strategy:
+
+The goal of this project is to get the attention of fellows researchers,
+and encourage discussions and collaboration (networking).
+
+
+### Strategy Table
+
+The strategy table illustrates the trade-off between importance and viability.
+ As we move onto Scope soon, it is clear that this project requires different 
+ phases to implement the exhaustive list of features - it is an on-going process! 
+
+Opportunity/Problem/Feature| Importance| Viability
+------------ | -------------------------|---------
+Create/Schedule a Journal Club | 5|5
+Add comments/description to Journal Club event | 5 | 5
+Delete a Journal Club event | 5 | 5
+Sign Up/ Sign In | 5 | 5
+Live Online Presentation | 4 | 2
+Broadcasting | 4 | 1
+Real time discussion | 5 | 1
+User comments/reviews | 5 | 5
+Total| 38 | 29
+
+## Scope:
+
+As derived from the strategy table (Importance < Viability), I am unable to put in place everything. As a result, I identified what a minimum viable product is. This means **Stage** 1 should be enough to satisfy users. I will then have the opportunity to get feedback for future developments.
 
 ## Skeleton:
 
