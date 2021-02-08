@@ -7,6 +7,18 @@
 
 This is the second milestone project of my journey as a Software Developer in Code Institute. The goal of this project is to build a full-stack web application that allows users to manage and common dataset about a particular domain.
 
+## Skeleton:
+
+I used **Balsamiq** software to create my initial wireframes, starting with the mobile and desktop design as an overall idea and helping me to make the design responsive afterwards.
+
+
+[Desktop wireframe](/static/assets/wireframes/MS3_desktop.pdf)
+
+[Tablet wireframe](/static/assets/wireframes/MS3_tablet.pdf)
+
+[Mobile wireframe](/static/assets/wireframes/MS3_mobile.pdf)
+
+
 ## Data model
 
 ![data model](/static/assets/img/datamodel.png)
