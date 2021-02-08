@@ -5,7 +5,24 @@
 
 ## Stream Three Project: Python and Data Centric Development - Code Institute
 
-This is the second milestone project of my journey as a Software Developer in Code Institute. The goal of this project is to build a full-stack web application that allows users to manage and common dataset about a particular domain.
+This is the third milestone project of my journey as a Software Developer in Code Institute. The goal of this project is to build a full-stack web application that allows users to manage and common dataset about a particular domain.
+As the ultimate goal, **JournalClub** aims to be an online journal club platform for 
+collaboration and discussion for research minds of academia. Journal Clubs 
+are essential research & academic activity at academic organizations. Therefore, **JournalClub** will provide
+an organization solution to a real world need. The main feature will be the
+journal club organisation. It will provide literature reading and mining tool.
+The Journal Club cycle would ideally include the following stages:
+
+1. Schedule
+2. Critical reading
+3. Critical appraise
+4. Live online presentation
+5. Broadcasting
+6. Realtime discussion
+7. Archive
+
+As the first stage release of this application, the minimal features to include will the CRUD (Create, Read, Update and Delete) 
+operations on a back-end database.
 
 ## Skeleton:
 
