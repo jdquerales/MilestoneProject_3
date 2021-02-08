@@ -276,3 +276,25 @@ For step 1 and 2, make sure you are in the root directory of your project. Don't
 
 For more information, visit [Cloning a repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 on github.
+
+## Credits
+
+### Authentication features
+- I used the authentication features from Code Institute walkthrough TaskManager project.
+My own implementation can be found at: (https://github.com/jdquerales/flask-task-manager-project).
+
+### CSS template
+- I used a Bootstrap template from (https://startbootstrap.com/themes).
+I used the **creative** template, which can be found at (https://github.com/startbootstrap/startbootstrap-creative)
+
+### Media
+- The photos used in portfolio section were obtained from [Pixabay](https://pixabay.com).
+- The logo of this project was created on (https://hatchful.shopify.com/).
+
+
+### Acknowledgements
+
+- I would like to thank my mentor Dick Vlaanderen for his support and helpful suggestions.
+
+- I would like to thank my friends Juan V. Guerrero and Manuel Odelli for testing my app and providing 
+useful feedback on encountered bugs/issues.
