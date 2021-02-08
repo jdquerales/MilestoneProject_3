@@ -160,24 +160,23 @@ wireframes as some of the features were evolving as I was working on the develop
 
 ## Surface:
 
-- Appealing pictures were chosen for backgrounds, in order to make compatible with the holidays purpose of the website (obtained from [Pixabay](https://pixabay.com)).
+- Appealing pictures were chosen for backgrounds, in order to make compatible with the purpose of the website (obtained from [Pixabay](https://pixabay.com)).
 
-- Google font "Pacifico" (cursive) was chosen for the brand and descriptive text and messages in all pages. 
+- Google font "Lato" is used throughout the site. 
 
-- Google font "Poppins" was chosen throughout the pages.
+- The CSS Family Grey   (#606060) color Scheme was chosen dashboard card background.
 
-- The CSS Family Orange/White (#FFA500) color Scheme was chosen for sections texts.
+- The CSS Family White  color Scheme was chosen dashboard card text.
 
-- The CSS Family #02457A color Scheme was chosen for footer background.
+- In Sections were a background image was not set, the CSS family background-color #fff was used.
 
-- The CSS #F05F40 color was used for home navegation and submit message buttons.
+- Buttons in SignUp/SignIn forms were consistently set in Blue.
 
-- The CSS #00CA4E color was used for in suggestions.html, destination.html and contact.html pages navegation buttons.
+- Buttons in call for action in home page forms were consistently set in Green.
 
-- The CSS #00AB66 color was used for show results buttons.
+- Navegation bar item are in Orange (#f4623a), while a Grey background is presented in dropdown menu in mobile devices sizes.
 
-- The CSS #CA0B00 color was used for show reset button.
-
+- All remaining text is constantly in CSS family #6c757d.
 
 ## Data Modeling (MongoDB Atlas)
 
