@@ -76,7 +76,7 @@ class User:
 
     # Login method
     def login(self):
-        user = db.users.find_one({"email": request.form.get('email').lower()})
+        user = db.users.find_one({"username": request.form.get('username').lower()})
         if user and check_password_hash(
                 user['password'], request.form.get('password')):
             return self.start_session(user)
