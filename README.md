@@ -1,5 +1,10 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+## Data model
+
+![data model](/static/assets/img/datamodel.png)
+
+
 ## Deployment
 
 **This procedure was followed to deploy Journal Club**
