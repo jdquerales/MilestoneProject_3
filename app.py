@@ -43,7 +43,7 @@ def login_required(f):
 class User:
     # Start session method
     def start_session(self, user):
-        user['password']
+        del user['password']
         session['logged_in'] = True
         session['user'] = user
         return redirect(url_for("dashboard"))
