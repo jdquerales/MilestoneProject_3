@@ -14,6 +14,8 @@ This is the second milestone project of my journey as a Software Developer in Co
 ## Code validation
 ![python validation](/static/assets/code_validation/css_w3c.png)
 
+![jquery validation](/static/assets/code_validation/JQuery_JSHint.png)
+
 ![python validation](/static/assets/code_validation/python_pep8.png)
 
 
