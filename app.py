@@ -3,7 +3,7 @@ from flask import (Flask, flash, render_template, jsonify,
                    request, session, redirect, url_for)
 from functools import wraps
 from flask_pymongo import PyMongo
-from passlib.hash import pbkdf2_sha256
+from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
 import uuid
 if os.path.exists("env.py"):
@@ -56,10 +56,10 @@ class User:
             "username": request.form.get('username').lower(),
             "email": request.form.get('email').lower(),
             "affiliation": request.form.get('affiliation'),
-            "password": request.form.get('password')
+            "password": generate_password_hash(request.form.get("password"))
         }
 # Encrypt the password
-        user['password'] = pbkdf2_sha256.encrypt(user['password'])
+        user['password'] = user['password']
         # Check for existing email address
         if db.users.find_one({"email": user['email']}):
             flash("Email address already in use", "danger")
@@ -77,9 +77,8 @@ class User:
     # Login method
     def login(self):
         user = db.users.find_one({"email": request.form.get('email').lower()})
-        if user and pbkdf2_sha256.verify(
-                request.form.get('password'),
-                user['password']):
+        if user and check_password_hash(
+                user['password'], request.form.get('password')):
             return self.start_session(user)
         else:
             flash("Invalid login credentials", "danger")
