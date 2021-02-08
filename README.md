@@ -224,6 +224,37 @@ Subscription | subscriber
 
 ## Defensive programming
 
+Given the nature of this application, in which users will be constantly adding
+and deleting information. I have implemented defensive programming throughout
+the site. In the following screenshots of selected different situations are shown. 
+
+- All input data in forms is validated (e.g. presence check, format check, range check)
+
+Presence check:
+![Empty field](/static/assets/code_validation/validation1.png)
+
+Format validation:
+![Incorrect format](/static/assets/code_validation/validation2.png)
+
+
+- All internal errors are handled gracefully and users are notified of the problem where
+appropriate.
+
+Incorrect user credentials:
+![Incorrect format](/static/assets/code_validation/validation2.png)
+
+Check for existing user:
+![Incorrect format](/static/assets/code_validation/validation2.png)
+
+
+- Before any modification of data modal are displayed in order to the user to confirm or cancel 
+the action.
+
+Ask for confirmation:
+![Incorrect format](/static/assets/code_validation/validation5.png)
+
+
+
 ## Testing
 
 ## Responsive design
