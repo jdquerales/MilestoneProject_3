@@ -32,7 +32,7 @@ The deployed website can be found [here](https://journalclub.herokuapp.com/).
 
 ![responsive mockups](/static/assets/img/demo.png)
 
-## UXD
+## User Experience Design (UXD)
  
 ## User stories:
 
@@ -126,6 +126,23 @@ As future capabilities:
 
 - Archive.
 
+## Structure:
+
+As it can be noticed in the initial wireframes, I decided 
+to organize the website in different pages (4 in total). The website
+contains navegation buttons that are easily identified and user friendly.
+
+- **Home Page**: I have include a header, central jumbotron (with navegation links to different actions), and a footer. I have included a background of a beach as a holiday theme.
+
+-  **Suggestion Page**: It includes a group of cards (using **Bootstrap** card class), links to Wikipedia and Google Maps. Offers information is also displayed. Navegation links are presented: Home, Finder, and Qet a Quote.
+
+- **Destination Page**: It is organize in different panels, one panel corresponding to the search menu, a Google Map panel (I have adopted the 1/3, 2/3 rule for the Desktop layout). There is a third panel which is created only after the search is performed.
+
+- **Contact Page**: It contains a contact form and a call to action.
+
+- Header and Footer are kept consistently throughout the website.
+
+- Background images are changed for each page, consistent with purpose of the section.
 
 
 ## Skeleton:
@@ -139,6 +156,27 @@ wireframes as some of the features were evolving as I was working on the develop
 [Tablet wireframe](/static/assets/wireframes/MS3_tablet.pdf)
 
 [Mobile wireframe](/static/assets/wireframes/MS3_mobile.pdf)
+
+
+## Surface:
+
+- Appealing pictures were chosen for backgrounds, in order to make compatible with the holidays purpose of the website (obtained from [Pixabay](https://pixabay.com)).
+
+- Google font "Pacifico" (cursive) was chosen for the brand and descriptive text and messages in all pages. 
+
+- Google font "Poppins" was chosen throughout the pages.
+
+- The CSS Family Orange/White (#FFA500) color Scheme was chosen for sections texts.
+
+- The CSS Family #02457A color Scheme was chosen for footer background.
+
+- The CSS #F05F40 color was used for home navegation and submit message buttons.
+
+- The CSS #00CA4E color was used for in suggestions.html, destination.html and contact.html pages navegation buttons.
+
+- The CSS #00AB66 color was used for show results buttons.
+
+- The CSS #CA0B00 color was used for show reset button.
 
 
 ## Data Modeling (MongoDB Atlas)
@@ -283,7 +321,7 @@ on github.
 - I used the authentication features from Code Institute walkthrough TaskManager project.
 My own implementation can be found at: (https://github.com/jdquerales/flask-task-manager-project).
 
-### CSS template
+### Bootstrap CSS template
 - I used a Bootstrap template from (https://startbootstrap.com/themes).
 I used the **creative** template, which can be found at (https://github.com/startbootstrap/startbootstrap-creative)
 
