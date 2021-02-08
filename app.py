@@ -115,10 +115,10 @@ class CreateNewJC:
             "added_on": datetime.datetime.now().strftime("%d-%m-%Y"),
             "added_by": session['user']['name']
         }
-        return db.add_article.update({"_id":event_id},submission)
+        return db.add_article.update({"_id": event_id}, submission)
 
     def delete(self, event_id):
-        return db.add_article.remove({"_id":event_id})
+        return db.add_article.remove({"_id": event_id})
 
 
 class Subscription:
@@ -143,7 +143,7 @@ class Subscription:
 def home():
     journals = list(mongo.db.add_article.find().sort([("iso_format", -1)]))
     return render_template('home.html', journals=journals)
-    
+
 
 @app.route('/home', methods=['POST', 'GET'])
 def subscribe():
@@ -216,14 +216,15 @@ def createJC():
 
 @app.route("/edit/<event_id>")
 def edit(event_id):
-    journals = mongo.db.add_article.find_one({"_id":event_id})
+    journals = mongo.db.add_article.find_one({"_id": event_id})
     categories = mongo.db.field_research.find().sort("field_research", 1)
     if request.method == "POST":
         CreateNewJC().edition(event_id)
-    return render_template("edit.html", journals=journals, categories=categories)
+    return render_template("edit.html", journals=journals,
+                           categories=categories)
 
 
-@app.route("/edit/<event_id>", methods=["GET","POST"])
+@app.route("/edit/<event_id>", methods=["GET", "POST"])
 def edit_update(event_id):
     if request.method == "POST":
         CreateNewJC().edition(event_id)

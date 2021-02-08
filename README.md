@@ -11,6 +11,10 @@ This is the second milestone project of my journey as a Software Developer in Co
 
 ![data model](/static/assets/img/datamodel.png)
 
+## Code validation
+
+![data model](/static/assets/code_validation/python_pep8.png)
+
 
 ## Deployment
 

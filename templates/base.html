@@ -125,15 +125,19 @@
 
 
     <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
-
+    
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRLbEkCc7-poNiXhu7kF83J3O5UnVZ8vA&callback=initMap">
-        </script>
-
-    <script src="{{ url_for('static', filename='/js/maps.js') }}"> 
-
     </script>
+    
+    <!--
+    <script src="{{ url_for('static', filename='/js/scripts.js') }}">
+    </script>
+    -->
 
+    <script src="static/js/scripts.js"></script>
+    
+    <!-- Add Google Maps JavaScript here-->
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById("map"), {
