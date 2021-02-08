@@ -222,9 +222,38 @@ User | start_session, signup, signout, login, update
 CreateNewJC | submission, delete, edition
 Subscription | subscriber
 
+## Defensive programming
+
+## Testing
+
+## Responsive design
+
+The deployed application is fully responsive. I tested 
+my site on Safari, Firefox, Opera and Google Chrome. The
+ mobile and desktop version of the website looks very good and it is working as desired.
+
+I used the chrome DevTools to test that the website is fully responsive. I tested the following
+devices (mobile and tablet sizes):
+
+- Moto G4.
+
+- Galaxy S5.
+
+- Galaxy S9 (my own device).
+
+- iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus and  iPhone X.
+
+- iPad and iPad Pro.
+
+- Surface Duo.
+
+I also used **Am I Responsive?** to check my responsive design and to create the final product screenshots presented at the beginning.
 
 
+## Code validation
 
+I used **W3C** to check my HTML and CSS files, they are OK and without errors (1 warning detected in index.html and destination.html - however, I did not consider them relevant). I used JSHint validator to check my javascript files.
+Below screenshots of the validation results are exhibited.
 ## Code validation
 ![python validation](/static/assets/code_validation/css_w3c.png)
 
