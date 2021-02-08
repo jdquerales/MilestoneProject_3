@@ -3,9 +3,9 @@
 
 
 
-## Stream Three Project: Data-Centric Development - Code Institute
+## Stream Three Project: Python and Data Centric Development - Code Institute
 
-This is the second milestone project of my journey as a Software Developer in Code Institute.
+This is the second milestone project of my journey as a Software Developer in Code Institute. The goal of this project is to build a full-stack web application that allows users to manage and common dataset about a particular domain.
 
 ## Data model
 
