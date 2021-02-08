@@ -1,45 +1,35 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome jdquerales,
+## Deployment
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+**This procedure was followed to deploy Journal Club**
+For step 1 and 2, make sure you are in the root directory of your project. Don't forget to push the two new files to github before proceeding with the deployment.
 
-## Gitpod Reminders
+1. Create a requirements file. In the command line interface (cli)  it can be done by running the following command:
+`pip3 freeze --local > requirements.txt`
+2. Create a Procfile. In the cli it can be done by running the following command: `echo web: python app.py > Procfile` "Note: make sure you have an empty new line after app.py"
+3. Log in to Heroku, click "New" > "Create new app"
+4. Give the project a unique name, choose region and click "Create app".
+5. Scroll down to "deployment method"-section. Choose "Github" for automatic deployment.
+6. From the inputs below, make sure your github user is selected, and then enter the name for your repo. Click "search". When it finds the repo, click the "connect" button. 
+7. Scroll back up and click "settings". Scroll down and click "Reveal config vars". Set up your variables for IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME.
+8. Scroll back up and click "Deploy". Scroll down and click "Enable automatic deployment". 
+9. Just beneath, click "Deploy branch". Heroku will now start building the app. When the build is complete, click "view app" to open it.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+**To clone the repository, follow these instructions:**
 
-`python3 -m http.server`
+1. Navigate to the [repository](https://github.com/jdquerales/MilestoneProject_3)
+2. Click **Clone or download**
+3. Copy the url from the **Clone or download** dropdown.
+4. In cli, navigate to the folder where you want to clone the repository.
+5. Type *git clone*, and then paste the URL you copied in Step 3.
+6. Press Enter
 
-A blue button should appear to click: *Make Public*,
+*Note: You will have to install all the dependencies from [requirements](https://github.com/jdquerales/MilestoneProject_3/blob/master/requirements.txt) for the app to work. In the cli, you can run the command* 
 
-Another blue button should appear to click: *Open Browser*.
+`pip install -r requirements.txt`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+*You will also have to set up an* `env.py` *file in the root directory of your project, and set up variables for IP, PORT, SECRET_KEY, MONGU_URI and MONGODB_NAME. In addition, you will have to setup a new collection and databases for the project in mongoDB.*
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+For more information, visit [Cloning a repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+on github.
