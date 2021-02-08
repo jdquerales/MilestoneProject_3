@@ -30,6 +30,21 @@ I used **Balsamiq** software to create my initial wireframes, starting with the 
 
 ![python validation](/static/assets/code_validation/python_pep8.png)
 
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    - The project uses **HTML** as building block.
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+    - The project uses **Cascading Style Sheets (CSS)** for adding style to the website.
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - The project uses **JavaScript (JS)** for adding interactivity to the website.
+- [Python](https://www.python.org/)
+    -  The project uses **Python3** for adding developing the backend functionality of this project.
+- [Flask](https://www.python.org/)
+    -  I used **Flask** micro web Python framework.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+    - I used **Jinja2** as the HTML templating language for Python.
+
 ## Libraries and Tools Used 
 
 - [Bootstrap (4.5.2)](https://getbootstrap.com/)
