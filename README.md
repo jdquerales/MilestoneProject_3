@@ -94,6 +94,40 @@ Total| 38 | 29
 
 As derived from the strategy table (Importance < Viability), I am unable to put in place everything. As a result, I identified what a minimum viable product is. This means **Stage** 1 should be enough to satisfy users. I will then have the opportunity to get feedback for future developments.
 
+Please find below the planned releases:
+
+## Stage 1 (current release)
+
+As the initial stage of this project:
+
+- Sign Up and Sign In functionalities.
+
+- Create Journal Club event.
+
+- Edit and Delete Journal Club functionalities.
+
+- Subcription for newsletters.
+
+- Call on Google maps API.
+
+- Journal Club Blog (all users contributions).
+
+
+
+## Stage 2 (Future release)
+
+As future capabilities:
+
+- Live online presentation.
+
+- Broadcasting.
+
+- Realtime discussion.
+
+- Archive.
+
+
+
 ## Skeleton:
 
 I used **Balsamiq** software to create my initial wireframes, starting with the mobile and desktop design as an overall idea and helping me to make the design responsive afterwards.
