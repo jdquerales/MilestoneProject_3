@@ -9,18 +9,22 @@ import uuid
 if os.path.exists("env.py"):
     import env
 
+# Create a Flask instance called app
 app = Flask(__name__)
 
+# Read env variables to connect to MongoDB
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 # create an instance of MongoDB database
 mongo = PyMongo(app)
-
 db = mongo.db
 
 
+# I will define a decorator that will allow
+# to show centain information only if the
+# user is logged in
 # decorators
 def login_required(f):
     @wraps(f)
@@ -31,16 +35,20 @@ def login_required(f):
             return redirect(url_for('home'))
     return wrap
 
+
 # Create User Class to be used in SignIn and SignUp functionalities
-
-
+# Most of the actions in the app will be define within the
+# User class, it will contain all the relevant actions (methods)
+# and it enable us to reuse code while keeping it minimal
 class User:
+    # Start session method
     def start_session(self, user):
         user['password']
         session['logged_in'] = True
         session['user'] = user
         return redirect(url_for("dashboard"))
 
+    # Signup method
     def signup(self):
         user = {
             "_id": uuid.uuid4().hex,
@@ -61,10 +69,12 @@ class User:
             return redirect(url_for("signup"))
         return jsonify({"error": "Signup failed"}), 400
 
+    # Signout method
     def signout(self):
         session.clear()
         return redirect(url_for('home'))
 
+    # Login method
     def login(self):
         user = db.users.find_one({"email": request.form.get('email').lower()})
         if user and pbkdf2_sha256.verify(
@@ -76,6 +86,7 @@ class User:
             return redirect(url_for("signin"))
         return jsonify({"error": "Invalid login credentials"}), 401
 
+# Update user method
     def update(self):
         updated_user = {
             "name": request.form.get('name').lower(),
@@ -89,7 +100,10 @@ class User:
         return redirect(url_for('dashboard'))
 
 
+# Here I define a new Class that manage the creation of a new
+# article
 class CreateNewJC:
+    # Submission method
     def submission(self):
         journal = {
             "_id": uuid.uuid4().hex,
@@ -104,6 +118,7 @@ class CreateNewJC:
         }
         return db.add_article.insert_one(journal)
 
+# edition method
     def edition(self, event_id):
         submission = {
             "title": request.form.get('title'),
@@ -117,10 +132,12 @@ class CreateNewJC:
         }
         return db.add_article.update({"_id": event_id}, submission)
 
+    # Delete method
     def delete(self, event_id):
         return db.add_article.remove({"_id": event_id})
 
 
+# Here I define a new Class that manage subscribers
 class Subscription:
     def subscriber(self):
         # check if username already exists in db
@@ -139,12 +156,14 @@ class Subscription:
             flash("Thanks for subscribing ! ", "success")
 
 
+# Entry point of app
 @app.route("/")
 def home():
     journals = list(mongo.db.add_article.find().sort([("iso_format", -1)]))
     return render_template('home.html', journals=journals)
 
 
+# POST method in home
 @app.route('/home', methods=['POST', 'GET'])
 def subscribe():
     if request.method == 'POST':
@@ -152,12 +171,14 @@ def subscribe():
     return redirect(url_for('home', _anchor="about"))
 
 
+# Route to display events
 @app.route('/events')
 def events():
     journals = list(mongo.db.add_article.find().sort([("iso_format", -1)]))
     return render_template('events.html', journals=journals)
 
 
+# Route to display dashboard
 @app.route('/dashboard')
 @login_required
 def dashboard():
@@ -165,11 +186,13 @@ def dashboard():
     return render_template('dashboard.html', journals=journals)
 
 
+# Route to change user information
 @app.route('/changeinfo')
 def changeinfo():
     return render_template('changeinfo.html')
 
 
+# Build POST method for changing user information
 @app.route('/changeinfo', methods=['POST', 'GET'])
 def changeInfo():
     if request.method == 'POST':
@@ -177,6 +200,7 @@ def changeInfo():
     return render_template('dashboard.html')
 
 
+# Route to Signin
 @app.route('/signin',  methods=['POST', 'GET'])
 def signin():
     if request.method == 'POST':
@@ -184,16 +208,19 @@ def signin():
     return render_template('signin.html')
 
 
+# Route to signout
 @app.route('/signout')
 def signout():
     return User().signout()
 
 
+# Route to signup
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
 
 
+# Signup POST and GET methods
 @app.route('/signup', methods=['POST', 'GET'])
 def signUp():
     if request.method == 'POST':
@@ -201,12 +228,14 @@ def signUp():
     return redirect(url_for('dashboard'))
 
 
+# Route to create a new journal article
 @app.route("/create")
 def create():
     categories = mongo.db.field_research.find().sort("field", 1)
     return render_template('create.html', categories=categories)
 
 
+# Create article POST and GET methods
 @app.route('/create', methods=['POST', 'GET'])
 def createJC():
     if request.method == 'POST':
@@ -214,6 +243,7 @@ def createJC():
     return render_template("dashboard.html")
 
 
+# Route to edit an article with dynamic variable event_id
 @app.route("/edit/<event_id>")
 def edit(event_id):
     journals = mongo.db.add_article.find_one({"_id": event_id})
@@ -224,6 +254,7 @@ def edit(event_id):
                            categories=categories)
 
 
+# POST and GET methods for edit article view
 @app.route("/edit/<event_id>", methods=["GET", "POST"])
 def edit_update(event_id):
     if request.method == "POST":
@@ -231,6 +262,7 @@ def edit_update(event_id):
     return redirect(url_for('events'))
 
 
+# Route to delete an article with dynamic variable event_id
 @app.route("/delete/<event_id>")
 def delete(event_id):
     CreateNewJC().delete(event_id)
