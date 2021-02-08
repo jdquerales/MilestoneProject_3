@@ -5,7 +5,9 @@
 
 ## Stream Three Project: Python and Data Centric Development - Code Institute
 
-This is the third milestone project of my journey as a Software Developer in Code Institute. The goal of this project is to build a full-stack web application that allows users to manage and common dataset about a particular domain.
+This is the third milestone project of my journey as a Software Developer in Code Institute.
+ The goal of this project is to build a full-stack web application that allows
+  users to manage a common dataset about a particular domain.
 As the ultimate goal, **JournalClub** aims to be an online journal club platform for 
 collaboration and discussion for research minds of academia. Journal Clubs 
 are essential research & academic activity at academic organizations. Therefore, **JournalClub** will provide
@@ -23,6 +25,47 @@ The Journal Club cycle would ideally include the following stages:
 
 As the first stage release of this application, the minimal features to include will the CRUD (Create, Read, Update and Delete) 
 operations on a back-end database.
+
+## Live website
+
+The deployed website can be found [here](https://journalclub.herokuapp.com/).
+
+![responsive mockups](/static/assets/img/demo.png)
+
+## UXD
+ 
+## User stories:
+
+Before starting the planning of the project I started by identifying initial
+need that will cover the minimal features of the first release of the application.
+In the following the user stories are presented, and in each case the corresponding CRUD
+operation is highlighted.
+
+#### As a user:
+
+- I want to signup to JournalClub so that I can contribute journal articles of my interest (**CREATE**)
+- I want to be able to modify my personal information on my profile (**UPDATE**)
+- I want to view all journal articles suggested by other fellow researchers.
+(**INDEX**).
+- I want to create a journal list to be shared with my fellows. (**CREATE**)
+- I want to access all details of the article journal (full citation reference).
+(**READ**).
+- I want to delete a journal club event created by me. (**DESTROY**)
+- I want to edit a journal club event created by me. (**EDIT/UPDATE**)
+- I want to comment on a particular journal article suggested by me or
+other fellows.(**COMMENTS/CREATE**).
+- I want to delete my comments on a particular journal articule.
+(**DESTROY/DELETE**).
+
+
+Beside the provided solution to the user of the application, it will also provide
+a value to the owner of the application:
+ 
+#### As a site owner:
+
+-  I want to be contacted by users in order to organise meet-ups and
+networking activities (**VALUE PROVIDED**).
+
 
 ## Skeleton:
 
