@@ -252,6 +252,39 @@ the action.
 Ask for confirmation:
 ![Incorrect format](/static/assets/code_validation/validation5.png)
 
+## Encountered bugs (fixed)
+
+Throughout the development process I encountered different bugs/issues. The main 
+tools that helped me discover and explore them was the command line interface and the
+Google Development Tool. In the following I will discribe some of the most important bugs
+I found and the corresponding solution I implemented:
+
+- **SignIn Failed because of case sensitive authentication**: After implementing
+the SignIn features I found a problem related with the case sensitivity of the form 
+field. I have fixed by using the lowercase method on username field before searching for it
+the database: **"username": request.form.get('username').lower()**.
+
+- **Responsiveness of height of section with dynamic content**: In the website there are few section in which 
+the content increase depending on the number of entries in the database. For instance the carousel in **events.html**,
+for which the more articles are available the section height should increase. I have fixed that issue by setting **min-height** css property
+instead of a fixed **height**. That will able the section to adjust to its inner content.
+
+- **Subscription to newsletter form**: after implementing the Subscription form in **home.html**, I found that
+empty field were allowed to be submitted. It should not happen!.  I fixed it by setting presence check and required validation in the 
+corresponding form.
+
+- **Lastest added article in home.html**: I found that Jinja was given errors when trying to render
+journal articles in home.html in the case that the corresponding list was empty. I fixed that problem by setting 
+the statement: **{% if journals is defined and journals[0] is defined %}** so that, the html block would be ignored 
+in case of not articles available in the database.
+
+- **Logo image and google map not shown in dynamic pages**: I found that images and google maps in base.html template were not being
+in dynamic pages like **/edit/<event_id>**. It had to be fixed my making sure that logo image and javascript maps script were defined as static file
+and using the **url_for** jinja convention.
+
+- **Security breaches in connection/authentication**: Initially I used the email account and password as authentication 
+field in SignIn form, and I kept getting the message "A data breach on a site or app exposed your password" on Chrome and Firefox browsers.
+The fix for that was using **username/password** combination instead.
 
 
 ## Testing
@@ -282,7 +315,7 @@ I also used **Am I Responsive?** to check my responsive design and to create the
 
 ## Code validation
 
-I used **W3C** to check my HTML and CSS files, they are OK and without errors (1 warning detected in index.html and destination.html - however, I did not consider them relevant). I used JSHint validator to check my javascript files.
+I used **W3C** to check my HTML and CSS files. I used JSHint validator to check my Javascript files. I used **PEP8online** to validate Python files.
 Below screenshots of the validation results are exhibited.
 ## Code validation
 ![python validation](/static/assets/code_validation/css_w3c.png)
