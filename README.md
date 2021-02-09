@@ -129,20 +129,29 @@ As future capabilities:
 ## Structure:
 
 As it can be noticed in the initial wireframes, I decided 
-to organize the website in different pages (4 in total). The website
-contains navegation buttons that are easily identified and user friendly.
+to organize the website in different pages. The number of pages available will vary dependending
+on whether the user is Logged In or not.
 
-- **Home Page**: I have include a header, central jumbotron (with navegation links to different actions), and a footer. I have included a background of a beach as a holiday theme.
+- **Base template**: I used a base template (**base.html**) what serves a the main structure of
+all pages. Regardless the location on the page users will be able to see the following features:
 
--  **Suggestion Page**: It includes a group of cards (using **Bootstrap** card class), links to Wikipedia and Google Maps. Offers information is also displayed. Navegation links are presented: Home, Finder, and Qet a Quote.
+    - **Navegation bar and Logo on the top of the page**, it will collapse to a dropdown menu in tablet and 
+      mobile phones sizes.
 
-- **Destination Page**: It is organize in different panels, one panel corresponding to the search menu, a Google Map panel (I have adopted the 1/3, 2/3 rule for the Desktop layout). There is a third panel which is created only after the search is performed.
+    - **About Section before footer**, it will contain a description of the website (purpose), Contact Info and Google Map with locations.
 
-- **Contact Page**: It contains a contact form and a call to action.
+    - **Footer** indicating copyrights.
 
-- Header and Footer are kept consistently throughout the website.
+- **Home Page** organized in Sections: calls to actions, features highlights and subscription to newsletters.
 
-- Background images are changed for each page, consistent with purpose of the section.
+- **Sign In/Sign Up/Create/Edit pages** will contains a main division with a form.
+
+- **Dashboard** will be organized in cards containing different user information and 
+  call to actions.
+
+- **Events page** will be displayed once the user signed in, and it will contain a 
+  accordion with list of all journal arcticles. Edit/Delete buttons will be available 
+  for those articles belonging to the current user.
 
 
 ## Skeleton:
