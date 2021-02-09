@@ -10,10 +10,10 @@ This is the third milestone project of my journey as a Software Developer in Cod
   users to manage a common dataset about a particular domain.
 As the ultimate goal, **JournalClub** aims to be an online journal club platform for 
 collaboration and discussion for research minds of academia. Journal Clubs 
-are essential research & academic activity at academic organizations. Therefore, **JournalClub** will provide
+are essential research & academic activities at academic organizations. Therefore, **JournalClub** will provide
 an organization solution to a real world need. The main feature will be the
 journal club organisation. It will provide literature reading and mining tool.
-The Journal Club cycle would ideally include the following stages:
+The Journal Club cycle would ideally include the following features:
 
 1. Schedule
 2. Critical reading
