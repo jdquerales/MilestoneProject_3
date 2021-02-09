@@ -306,7 +306,7 @@ The fix for that was using **username/password** combination instead.
 The testing of the website, both in development and as a 
 finished product has been done through manual testing. 
 I have decided to present the manual tests conducted in a separated
-file [Manual Tests](/static/ManualTesting/testing.md).
+file [Manual Tests](/ManualTesting/testing.md).
 
 
 ## Responsive design
