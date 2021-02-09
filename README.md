@@ -23,7 +23,7 @@ The Journal Club cycle would ideally include the following features:
 6. Realtime discussion
 7. Archive
 
-As the first stage release of this application, the minimal features to include will the CRUD (Create, Read, Update and Delete) 
+As the first stage release of this application, the minimal features to include will be the CRUD (Create, Read, Update and Delete) 
 operations on a back-end database.
 
 ## Live website
@@ -37,7 +37,7 @@ The deployed website can be found [here](https://journalclub.herokuapp.com/).
 ## User stories:
 
 Before starting the planning of the project I started by identifying initial
-need that will cover the minimal features of the first release of the application.
+needs that will cover the minimal features of the first release of the application.
 In the following the user stories are presented, and in each case the corresponding CRUD
 operation is highlighted.
 
@@ -57,8 +57,7 @@ other fellows.(**COMMENTS/CREATE**)
 - I want to delete my comments on a particular journal articule.
 (**DESTROY/DELETE**)
 
-
-Beside the provided solution to the user of the application, it will also provide
+Beside the provided solution to the users, it will also provide
 a value to the owner of the application:
 
 #### As a site owner:
@@ -69,14 +68,13 @@ networking activities (**VALUE PROVIDED**).
 ## Strategy:
 
 The goal of this project is to get the attention of fellows researchers,
-and encourage discussions and collaboration (networking).
-
+and encourage discussions and collaboration (**networking**).
 
 ### Strategy Table
 
 The strategy table illustrates the trade-off between importance and viability.
- As we move onto Scope soon, it is clear that this project requires different 
- phases to implement the exhaustive list of features - it is an on-going process! 
+As we move onto Scope soon, it is clear that this project requires different 
+phases to implement the exhaustive list of features - it is an on-going process! 
 
 Opportunity/Problem/Feature| Importance| Viability
 ------------ | -------------------------|---------
@@ -92,7 +90,8 @@ Total| 38 | 29
 
 ## Scope:
 
-As derived from the strategy table (Importance < Viability), I am unable to put in place everything. As a result, I identified what a minimum viable product is. This means **Stage** 1 should be enough to satisfy users. I will then have the opportunity to get feedback for future developments.
+As derived from the strategy table (Importance < Viability), I am unable to put in place everything.
+ As a result, I identified what a minimum viable product is. This means **Stage** 1 should be enough to satisfy users. I will then have the opportunity to get feedback for future developments.
 
 Please find below the planned releases:
 
@@ -112,8 +111,6 @@ As the initial stage of this project:
 
 - Journal Club Blog (all users contributions).
 
-
-
 ## Stage 2 (Future release)
 
 As future capabilities:
@@ -129,18 +126,19 @@ As future capabilities:
 ## Structure:
 
 As it can be noticed in the initial wireframes, I decided 
-to organize the website in different pages. The number of pages available will vary dependending
-on whether the user is Logged In or not.
+to organize the website in different pages. The number 
+of pages available will vary depending
+on whether the user is logged in or not.
 
-- **Base template**: I used a base template (**base.html**) what serves a the main structure of
-all pages. Regardless the location on the page users will be able to see the following features:
+- **Base template**: I used a base template (**base.html**) what serves as the main structure of
+all pages. Regardless the location on the page, users will be able to see the following features:
 
     - **Navegation bar and Logo on the top of the page**, it will collapse to a dropdown menu in tablet and 
       mobile phones sizes.
 
     - **About Section before footer**, it will contain a description of the website (purpose), Contact Info and Google Map with locations.
 
-    - **Footer** indicating copyrights.
+    - **Footer** indicating aauthorship  and copyrights.
 
 - **Home Page** organized in Sections: calls to actions, features highlights and subscription to newsletters.
 
@@ -149,14 +147,16 @@ all pages. Regardless the location on the page users will be able to see the fol
 - **Dashboard** will be organized in cards containing different user information and 
   call to actions.
 
-- **Events page** will be displayed once the user signed in, and it will contain a 
-  accordion with list of all journal arcticles. Edit/Delete buttons will be available 
+- **Events page** will be displayed once the user signed in, and it will contain an
+  accordion with list of all journal arcticles. **Edit/Delete** buttons will be available 
   for those articles belonging to the current user.
 
 
 ## Skeleton:
 
-I used **Balsamiq** software to create my initial wireframes, starting with the mobile and desktop design as an overall idea and helping me to make the design responsive afterwards.
+I used **Balsamiq** software to create my initial wireframes, starting 
+with the mobile and desktop design as an overall idea and helping me 
+to make the design responsive afterwards.
 The deployed application slightly differs from the initial
 wireframes as some of the features were evolving as I was working on the development.
 
@@ -169,7 +169,8 @@ wireframes as some of the features were evolving as I was working on the develop
 
 ## Surface:
 
-- Appealing pictures were chosen for backgrounds, in order to make compatible with the purpose of the website (obtained from [Pixabay](https://pixabay.com)).
+- Appealing pictures were chosen for backgrounds, in order to make it compatible 
+with the purpose of the website (obtained from [Pixabay](https://pixabay.com)).
 
 - Google font "Lato" is used throughout the site. 
 
@@ -183,7 +184,8 @@ wireframes as some of the features were evolving as I was working on the develop
 
 - Buttons in call for action in home page forms were consistently set in Green.
 
-- Navegation bar item are in Orange (#f4623a), while a Grey background is presented in dropdown menu in mobile devices sizes.
+- Navegation bar item are in Orange (#f4623a), while a Grey background is presented in
+ dropdown menu in mobile devices sizes.
 
 - All remaining text is constantly in CSS family #6c757d.
 
@@ -191,11 +193,12 @@ wireframes as some of the features were evolving as I was working on the develop
 
 Keeping in mind that the main challenge in data modeling is balancing the needs
 of the application, the performance characteristics of the database engine, 
-and the data retrieval patterns. I adopted the the philosophy that
+and the data retrieval patterns, I adopted the the philosophy that
 while designing my data model I would consider the application usage of the data
 (i.e. queries, updates, and processing of the data) as well as the inherent 
 structure of the data itself. The database engine used in this project is MongoBD Atlas.
-MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, 
+MongoDB is a source-available cross-platform document-oriented database program.
+ Classified as a NoSQL database program, 
 MongoDB uses JSON-like documents with optional schemas. 
 
 The **JournalClub** single collection hosted in MongoDB is conformed by
@@ -203,7 +206,7 @@ four documents: **users**, **add_article**, **field_reasearch** and **subscriber
 these documents contains unique attributes, and relationships between 
 documents are also present. In the following diagram my data model is shown. Note
 that relationships between 3 of the documents are exist, while the **subscribers**
-document is not related to the others.
+document is not related to the others. The following diagram respresents my data model:
 
 
 ![data model](/static/assets/img/datamodel.png)
@@ -215,14 +218,13 @@ the object oriented programming (OOP) paradigm. Using OOP improves
 software-development productivity as it is
 modular by providing separation of duties in object-based program development.
 It is also extensible, as objects can be extended to include new attributes and
-behaviors. Objects can also be reused within an across applications. Because of
+behaviors. Objects can also be reused within and across applications. Because of
 these three factors – modularity, extensibility, and reusability – OOP provides
 improved software-development productivity over traditional
 procedure-based programming techniques. OOP also improves software 
 maintainability.
 
 The **app.py** file contains the following classes and methods:
-
 
 Class | Methods
 ------------ | -------------------------
@@ -232,7 +234,7 @@ Subscription | subscriber
 
 ## Defensive programming
 
-Given the nature of this application, in which users will be constantly adding
+Given the nature of this application: users will be constantly adding
 and deleting information. I have implemented defensive programming throughout
 the site. In the following screenshots of selected different situations are shown. 
 
@@ -249,9 +251,11 @@ Format validation:
 appropriate.
 
 Incorrect user credentials:
+
 ![Incorrect format](/static/assets/code_validation/validation2.png)
 
 Check for existing user:
+
 ![Incorrect format](/static/assets/code_validation/validation2.png)
 
 
@@ -259,13 +263,14 @@ Check for existing user:
 the action.
 
 Ask for confirmation:
+
 ![Incorrect format](/static/assets/code_validation/validation5.png)
 
 ## Encountered bugs (fixed)
 
 Throughout the development process I encountered different bugs/issues. The main 
-tools that helped me discover and explore them was the command line interface and the
-Google Development Tool. In the following I will discribe some of the most important bugs
+tools that helped me discover and explore them was the command line interface, the
+Google Development Tool, and Jinja2 debug functionality. In the following I will discribe some of the most important bugs
 I found and the corresponding solution I implemented:
 
 - **SignIn Failed because of case sensitive authentication**: After implementing
@@ -305,6 +310,7 @@ The fix for that was using **username/password** combination instead.
 ## Manual testing of the deployed product
 The testing of the website, both in development and as a 
 finished product has been done through manual testing. 
+Due to the extension of the testing procedures, 
 I have decided to present the manual tests conducted in a separated
 file [Manual Tests](/ManualTesting/testing.md).
 
@@ -313,10 +319,11 @@ file [Manual Tests](/ManualTesting/testing.md).
 
 The deployed application is fully responsive. I tested 
 my site on Safari, Firefox, Opera and Google Chrome. The
- mobile and desktop version of the website looks very good and it is working as desired.
+mobile and desktop version of the website looks very good
+ and it is working as planned.
 
-I used the chrome DevTools to test that the website is fully responsive. I tested the following
-devices (mobile and tablet sizes):
+I used the chrome DevTools to test that the website is fully responsive. I have also used my own Desktop/Laptop and mobile phone.
+I tested the following devices (mobile and tablet sizes):
 
 - Moto G4.
 
@@ -330,12 +337,13 @@ devices (mobile and tablet sizes):
 
 - Surface Duo.
 
-I also used **Am I Responsive?** to check my responsive design and to create the final product screenshots presented at the beginning.
+I also used **Am I Responsive?** to check my responsive design and to create 
+the final product screenshots presented at the beginning.
 
 
 ## Code validation
 
-I used **W3C** to check my HTML and CSS files. I used JSHint validator to check my Javascript files. I used **PEP8online** to validate Python files.
+I used **W3C** to check my HTML and CSS files. I used **JSHint** validator to check my Javascript files. I used **PEP8online** to validate Python files.
 Below screenshots of the validation results are exhibited.
 
 ## HMTL validation 
