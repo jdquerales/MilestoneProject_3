@@ -11,24 +11,24 @@
 
             <div class=" form-group">
                 <label for="name">Full Name</label>
-                <input type="text" name="name" value="{{ session['user']['name'] }}" class="field" required>
+                <input type="text" name="name" id="name" value="{{ session['user']['name'] }}" class="field" required>
             </div>
 
             <div class=" form-group">
                 <label for="username">Username</label>
-                <input type="text" name="username" value="{{ session['user']['username'] }}" class="field" required>
+                <input type="text" name="username" id="username" value="{{ session['user']['username'] }}" class="field" required>
             </div>
 
             <div class=" form-group">
                 <label for="affiliation">Affiliation</label>
-                <input type="text" name="affiliation" value="{{ session['user']['affiliation'] }}" class="field"
+                <input type="text" name="affiliation" id="affiliation" value="{{ session['user']['affiliation'] }}" class="field"
                     required>
             </div>
 
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" name="email" value="{{ session['user']['email'] }}" class="field" required>
+                <input type="email" name="email" id="email" value="{{ session['user']['email'] }}" class="field" required>
             </div>
 
             <div class="form-group">

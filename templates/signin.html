@@ -10,13 +10,13 @@
         <form name="login_form" method="POST" action="{{ url_for('signin') }}">
 
             <div class=" form-group">
+                <input type="text" name="username" id="username" class="field" required>
                 <label for="username">Username</label>
-                <input type="text" name="username" class="field" required>
             </div>
 
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="field" required>
+                <label for="password" >Password</label>
+                <input type="password" name="password" id="password" class="field" required>
 
             </div>
 

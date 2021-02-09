@@ -282,6 +282,10 @@ in case of not articles available in the database.
 in dynamic pages like **/edit/<event_id>**. It had to be fixed my making sure that logo image and javascript maps script were defined as static file
 and using the **url_for** jinja convention.
 
+- **Google maps not shown in Heroku**: After deploying the app to Heroku I found out that Google Maps were not displayed. By inspecting the Google Dev Tool Console,
+I noticed that they were blocked. I figured out that I had to load the map script in the same page were it was called (**base.html**).
+Now, it is working but I would like to be able to include the maps JS file in static/assets/js folder!.
+
 - **Security breaches in connection/authentication**: Initially I used the email account and password as authentication 
 field in SignIn form, and I kept getting the message "A data breach on a site or app exposed your password" on Chrome and Firefox browsers.
 The fix for that was using **username/password** combination instead.
@@ -317,11 +321,37 @@ I also used **Am I Responsive?** to check my responsive design and to create the
 
 I used **W3C** to check my HTML and CSS files. I used JSHint validator to check my Javascript files. I used **PEP8online** to validate Python files.
 Below screenshots of the validation results are exhibited.
-## Code validation
+
+## HMTL validation 
+All html pages passed the **W3C** validator, except for warnings/errors related to the Jinja templating formatting. A selection of validation outputs is shown as follows.
+A complete selection of screenshots for every html page can be found at [HTML validation](/static/assets/code_validation/)
+
+Base template:
+
+![Base template validation](/static/assets/code_validation/base.png)
+
+
+Home page:
+
+![Home page validation](/static/assets/code_validation/home.png)
+
+Signin page:
+
+![Signin page validation](/static/assets/code_validation/signin.png)
+
+Signup page:
+
+![Signout page validation](/static/assets/code_validation/signup.png)
+
+
+
+## CSS validation
 ![python validation](/static/assets/code_validation/css_w3c.png)
 
+## JavaScript validation
 ![jquery validation](/static/assets/code_validation/JQuery_JSHint.png)
 
+## Python validation
 ![python validation](/static/assets/code_validation/python_pep8.png)
 
 ## Technologies Used
