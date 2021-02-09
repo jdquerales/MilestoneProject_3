@@ -17,8 +17,11 @@
      ![responsive mockups](../static/assets/US_testing/us2.png)
     - **Result**: Pass
      SignIn:
+
      ![responsive mockups](../static/assets/US_testing/us3.png)
+
      Dashboard:
+     
      ![responsive mockups](../static/assets/US_testing/us4.png)
 
 - I want to be able to modify my personal information on my profile (**UPDATE**)
@@ -28,7 +31,10 @@
     - **Result**: Failed
      ![responsive mockups](../static/assets/US_testing/us6.png)
     - **Fix Action Taken**: I inspect the source code, and enable debug feature
-      to find source of error.
+      to find source of error. I had deleted password from session, and I had to put it back.
+    - **Result**: Pass
+     ![responsive mockups](../static/assets/US_testing/us7.png)
+       
 
 - I want to view all journal articles suggested by other fellow researchers.
 (**INDEX**)
