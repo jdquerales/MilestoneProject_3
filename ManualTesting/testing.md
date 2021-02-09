@@ -135,12 +135,11 @@ other fellows.(**COMMENTS/CREATE**)
 
 ## SignOut functionality:
 
-   - **Action**:  I clicked on **SignOut** button on 
-       navegation bar. 
+- **Action**:  I clicked on **SignOut** button on navegation bar. 
 
-    - **Expected**: User redirected to **Home** page & relevant Nav Bar items removed.
+- **Expected**: User redirected to **Home** page & relevant Nav Bar items removed.
 
-    - **Result** : Pass.
+- **Result** : Pass.
 
 ![responsive mockups](../static/assets/US_testing/us17.png) 
 
