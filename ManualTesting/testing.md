@@ -53,11 +53,11 @@
 - I want to view all journal articles suggested by other fellow researchers.
 (**INDEX**)
 
-    - **Action**: Once logged in, I clicked on **Events**.
+- **Action**: Once logged in, I clicked on **Events**.
 
-    - **Expected**: List of all available articles.
+- **Expected**: List of all available articles.
 
-    - **Result** : Pass
+- **Result** : Pass
 
      ![responsive mockups](../static/assets/US_testing/us8.png)
 

@@ -252,11 +252,11 @@ appropriate.
 
 Incorrect user credentials:
 
-![Incorrect format](/static/assets/code_validation/validation2.png)
+![Incorrect format](/static/assets/code_validation/validation3.png)
 
 Check for existing user:
 
-![Incorrect format](/static/assets/code_validation/validation2.png)
+![Incorrect format](/static/assets/code_validation/validation4.png)
 
 
 - Before any modification of data modal are displayed in order to the user to confirm or cancel 
@@ -393,7 +393,7 @@ Signup page:
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
     - I used **Jinja2** as the HTML templating language for Python.
 
-## Libraries and Tools Used 
+## Libraries, Services and Tools Used 
 
 - [Bootstrap (4.5.2)](https://getbootstrap.com/)
     - The project uses **Bootstrap** to design and customize responsive mobile-first sites.
@@ -467,7 +467,7 @@ In the cli, you can run the command*
 `pip install -r requirements.txt`
 
 *You will also have to set up an* `env.py` *file in the root directory of your project, 
-and set up variables for IP, PORT, SECRET_KEY, MONGU_URI and MONGODB_NAME. In addition,
+and set up variables for IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME. In addition,
  you will have to setup a new collection and databases for the project in MongoDB.*
 
 For more information, visit [Cloning a repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
