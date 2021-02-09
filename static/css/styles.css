@@ -6,6 +6,400 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap');
 
+
+/* From here my custumization of CSS styles are presented */
+
+
+/* Forms styles */
+
+form {
+  transition: opacity .15s ease;
+}
+
+form.loading {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+label {
+  margin: 0 0 2px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: var(--grey-medium);
+  display: block;
+}
+
+.field {
+  margin: 0 0 24px;
+  padding: 11px 16px 9px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--almost-black);
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  display: block;
+  background: var(--almost-white);
+  transition: border-color .15s ease;
+}
+
+.field:focus {
+  border-color: var(--grey-medium);
+  outline: none;
+}
+
+input[type=submit] {
+  display: block;
+}
+
+/* Cards styles  */
+
+.card-wrapper {
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper-dashboard {
+  margin: 0 auto;
+  padding: 0px 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+
+.card {
+  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  background: var(--white);
+  margin: 80px 30% 10px 30%;
+    padding: 15px;
+}
+
+.card-dashboard {
+  margin: 0 30px 10px;
+  padding: 20px 40px;
+  width: 460px;
+  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  background: var(--white);
+  height: 50%;
+  background-color: #606060;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-dashboard-listing {
+  margin: 0 30px 10px;
+  padding: 20px 40px;
+  width: 980px;
+  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  background: var(--white);
+  height: 50%;
+  background-color: #606060;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 1100px){
+    .card-dashboard-listing {
+    width: 460px;
+    }
+}
+
+@media (max-width: 700px){
+.card {
+margin: 10px 20px 10px 20px;
+}
+
+.card-dashboard {
+margin: 10px 20px 10px 20px;
+}
+
+}
+
+@media (max-width: 450px){
+.card-dashboard h1 {
+  margin: 0.5em 0 1em;
+  color: var(--white);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.card-dashboard h2 {
+  margin: 0.5em 0 1em;
+  color: var(--white);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+}
+
+/* Buttons styles */
+.btn-form {
+  margin: 0 0 24px;
+  padding: 11px 30px 10px;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary);
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.btn-form:hover {
+  background: var(--primary-dark);
+}
+
+.error {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--red);
+}
+
+.error--hidden {
+  display: none;
+}
+
+/* Subscribe button */
+.subsBtn input {
+    border: none;
+    padding: 8px 10px;
+    outline: none;
+    margin: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 480px){
+.subsBtn input {
+    padding: 8px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    float: left!important;
+    display: block!important;
+    width: 100%!important;
+}
+}
+
+.subscribeBtn
+{
+    background: #0e3d31;
+    color: #FFF;
+    text-decoration: none;
+    padding: 8px 40px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 480px){
+.subscribeBtn {
+    margin-top: 11px;
+}
+}
+
+/* subscribe page styles */
+.subscribepage {
+  padding-top: 10rem;
+  padding-bottom: 5px;
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/welcome.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media (max-width: 450px){
+.subscribepage {
+    padding-top: 180px;
+}
+
+.card {
+margin: 0px 20px 10px 20px;
+padding: 15px 15px 15px 15px;
+}
+
+.card-dashboard {
+margin: 0px 20px 10px 20px;
+height: 40%;
+color: var(--white);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+}
+
+/* create page styles */
+.createpage {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/composition.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* dashboard page styles */
+.dashboardpage {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/note.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+/* event page styles */
+.eventpage {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.card-accordion{
+    margin: 10px 20px 10px 20px;
+}
+
+.collapse.in, .collapse-accordion{
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.flash-messages {
+    color: red;
+}
+
+/* ------------------------------------- Footer styles */
+footer {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+  text-align: justify;
+  margin-left: 20px;
+ margin-right: 20px;
+ 
+}
+
+/* Body styles */
+html, body {
+  overflow-x:hidden 
+} 
+
+.footer-titles {
+  text-align: center;
+  margin-bottom: 35px;
+  
+}
+
+div#map {
+    min-height: 200px;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.map-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-item{
+    margin-right: 10px;
+}
+
+
+#mainNav .active {
+    color:            blue;
+    background-color:  rgba(201, 76, 76, 0.3);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#title-button{
+     text-decoration: none;
+}
+
+.modal--hidden {
+  display: none;
+}
+
+/* Flash messages styles*/
+
+#flash-alerts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flash-messages-div {
+     display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-sm {
+    margin: 5px;
+}
+
+.carousel-inner .carousel-item {
+   -webkit-transition: 0s !important;
+    -o-transition: 0s !important;
+    transition: 0s !important;
+}
+
+.text-carousel {
+    color: #A0F2A8;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+/*External Sources*/
+/* From where I have included the CSS formatting included in Bootstrap template I have used:
+ from (https://startbootstrap.com/themes). I used the creative template, which can be found at (https://github.com/startbootstrap/startbootstrap-creative)
+ */ 
+
 /*!
 * Start Bootstrap - Creative v6.0.4 (https://startbootstrap.com/theme/creative)
 * Copyright 2013-2020 Start Bootstrap
@@ -9969,399 +10363,3 @@ header.masthead h1 {
   color: rgba(255, 255, 255, 0.75);
 }
 
-
-/* From here my custumization of CSS styles are presented */
-
-
-/* Forms */
-
-form {
-  transition: opacity .15s ease;
-}
-
-form.loading {
-  pointer-events: none;
-  opacity: 0.75;
-}
-
-label {
-  margin: 0 0 2px;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  color: var(--grey-medium);
-  display: block;
-}
-
-.field {
-  margin: 0 0 24px;
-  padding: 11px 16px 9px;
-  width: 100%;
-  font-size: 16px;
-  line-height: 26px;
-  color: var(--almost-black);
-  border: 1px solid var(--grey);
-  border-radius: 4px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  display: block;
-  background: var(--almost-white);
-  transition: border-color .15s ease;
-}
-
-.field:focus {
-  border-color: var(--grey-medium);
-  outline: none;
-}
-
-input[type=submit] {
-  display: block;
-}
-
-/* Cards */
-.card-wrapper {
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-wrapper-dashboard {
-  margin: 0 auto;
-  padding: 0px 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  display: flex;
-}
-
-
-.card {
-  
-  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
-  border-radius: 5px;
-  background: var(--white);
-  margin: 80px 30% 10px 30%;
-    padding: 15px;
-}
-
-.card-dashboard {
-  margin: 0 30px 10px;
-  padding: 20px 40px;
-  width: 460px;
-  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
-  border-radius: 5px;
-  background: var(--white);
-  height: 50%;
-  background-color: #606060;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.card-dashboard-listing {
-  margin: 0 30px 10px;
-  padding: 20px 40px;
-  width: 980px;
-  box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
-  border-radius: 5px;
-  background: var(--white);
-  height: 50%;
-  background-color: #606060;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-@media (max-width: 1100px){
-    .card-dashboard-listing {
-    width: 460px;
-    }
-}
-
-@media (max-width: 700px){
-.card {
-margin: 10px 20px 10px 20px;
-}
-
-.card-dashboard {
-margin: 10px 20px 10px 20px;
-}
-
-}
-
-/* Buttons */
-.btn-form {
-  margin: 0 0 24px;
-  padding: 11px 30px 10px;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--white);
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  display: inline-block;
-  background: var(--primary);
-  transition: color .15s ease, background-color .15s ease;
-}
-
-.btn-form:hover {
-  background: var(--primary-dark);
-}
-
-.error {
-  margin: 0;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  color: var(--red);
-}
-
-.error--hidden {
-  display: none;
-}
-
-/* Subscribe button */
-.subsBtn input {
-    border: none;
-    padding: 8px 10px;
-    outline: none;
-    margin: 5px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-}
-
-
-@media (max-width: 480px){
-.subsBtn input {
-    padding: 8px 10px;
-    margin: 5px;
-    border-radius: 20px;
-    float: left!important;
-    display: block!important;
-    width: 100%!important;
-}
-}
-
-.subscribeBtn
-{
-    background: #0e3d31;
-    color: #FFF;
-    text-decoration: none;
-    padding: 8px 40px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-}
-
-@media (max-width: 480px){
-.subscribeBtn {
-    margin-top: 11px;
-}
-}
-
-/* subscribe page */
-.subscribepage {
-  padding-top: 10rem;
-  padding-bottom: 5px;
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/welcome.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  min-height: 100vh;
-}
-
-@media (max-width: 450px){
-.subscribepage {
-    padding-top: 180px;
-}
-
-.card {
-margin: 0px 20px 10px 20px;
-padding: 15px 15px 15px 15px;
-}
-
-.card-dashboard {
-margin: 0px 20px 10px 20px;
-height: 40%;
-color: var(--white);
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-
-}
-
-/* create page */
-.createpage {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/composition.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  min-height: 100vh;
-}
-
-/* dashboard page */
-.dashboardpage {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/note.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  min-height: 100vh;
-}
-
-
-@media (max-width: 450px){
-
-
-.card-dashboard h1 {
-  margin: 0.5em 0 1em;
-  color: var(--white);
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-.card-dashboard h2 {
-  margin: 0.5em 0 1em;
-  color: var(--white);
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-
-}
-
-/* event page */
-.eventpage {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.0) 100%), url("../assets/img/desktop.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  min-height: 100vh;
-}
-
-/* Container flexbox: center container using Flexbox 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
-
-.card-accordion{
-    margin: 10px 20px 10px 20px;
-}
-
-.collapse.in, .collapse-accordion{
-  height: 150px;
-  overflow-y: scroll;
-}
-
-.flash-messages {
-    color: red;
-}
-
-/* ------------------------------------- Footer styles */
-footer {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
-  text-align: justify;
-  margin-left: 20px;
- margin-right: 20px;
- 
-}
-
-html, body {
-  overflow-x:hidden 
-} 
-
-.footer-titles {
-  text-align: center;
-  margin-bottom: 35px;
-  
-}
-
-div#map {
-    min-height: 200px;
-    margin-left: 5%;
-    width: 90%;
-}
-
-.map-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-item{
-    margin-right: 10px;
-}
-
-
-#mainNav .active {
-    color:            blue;
-    background-color:  rgba(201, 76, 76, 0.3);
-}
-
-a:link {
-  text-decoration: none;
-}
-
-#title-button{
-     text-decoration: none;
-}
-
-.modal--hidden {
-  display: none;
-}
-
-#flash-alerts{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flash-messages-div {
-     display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-sm {
-    margin: 5px;
-}
-
-.carousel-inner .carousel-item {
-   -webkit-transition: 0s !important;
-    -o-transition: 0s !important;
-    transition: 0s !important;
-}
-
-.text-carousel {
-    color: #A0F2A8;
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 1.2;
-}
