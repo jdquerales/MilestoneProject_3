@@ -30,7 +30,7 @@ operations on a back-end database.
 
 The deployed website can be found [here](https://journalclub.herokuapp.com/).
 
-![responsive mockups](/static/assets/img/demo.png)
+![responsive mockups](/static/assets/img/demo2.png)
 
 ## User Experience Design (UXD)
  
