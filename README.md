@@ -46,16 +46,16 @@ operation is highlighted.
 - I want to signup to JournalClub so that I can contribute journal articles of my interest (**CREATE**)
 - I want to be able to modify my personal information on my profile (**UPDATE**)
 - I want to view all journal articles suggested by other fellow researchers.
-(**INDEX**).
+(**INDEX**)
 - I want to create a journal list to be shared with my fellows. (**CREATE**)
 - I want to access all details of the article journal (full citation reference).
-(**READ**).
+(**READ**)
 - I want to delete a journal club event created by me. (**DESTROY**)
 - I want to edit a journal club event created by me. (**EDIT/UPDATE**)
 - I want to comment on a particular journal article suggested by me or
-other fellows.(**COMMENTS/CREATE**).
+other fellows.(**COMMENTS/CREATE**)
 - I want to delete my comments on a particular journal articule.
-(**DESTROY/DELETE**).
+(**DESTROY/DELETE**)
 
 
 Beside the provided solution to the user of the application, it will also provide
@@ -301,6 +301,13 @@ The fix for that was using **username/password** combination instead.
 
 
 ## Testing
+
+## Manual testing of the deployed product
+The testing of the website, both in development and as a 
+finished product has been done through manual testing. 
+I have decided to present the manual tests conducted in a separated
+file [Manual Tests](/static/ManualTesting/testing.md).
+
 
 ## Responsive design
 
