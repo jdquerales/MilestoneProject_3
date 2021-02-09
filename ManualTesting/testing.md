@@ -129,6 +129,18 @@ other fellows.(**COMMENTS/CREATE**)
 
 ## Check that changes are reflected in Database
 
-New User now in **users** document:
+## New User now in **users** document:
 
 ![responsive mockups](../static/assets/US_testing/us16.png) 
+
+## SignOut functionality:
+
+   - **Action**:  I clicked on **SignOut** button on 
+       navegation bar. 
+
+    - **Expected**: User redirected to **Home** page & relevant Nav Bar items removed.
+
+    - **Result** : Pass.
+
+![responsive mockups](../static/assets/US_testing/us17.png) 
+
