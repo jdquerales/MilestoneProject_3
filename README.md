@@ -459,6 +459,9 @@ on github.
 - I used the authentication features from Code Institute walkthrough TaskManager project.
 My own implementation can be found at: (https://github.com/jdquerales/flask-task-manager-project).
 
+- For implementing the authentication features (SigIn/SignUp forms) I followed along tutorials 
+by Luke Peters at Youtube (https://www.youtube.com/watch?v=w1STSSumoVk&t=153s).
+
 ### Bootstrap CSS template
 - I used a Bootstrap template from (https://startbootstrap.com/themes).
 I used the **creative** template, which can be found at (https://github.com/startbootstrap/startbootstrap-creative)
